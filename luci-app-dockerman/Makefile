@@ -4,7 +4,9 @@ LUCI_TITLE:=LuCI Support for docker
 LUCI_DEPENDS:=@(aarch64||arm||x86_64) \
 	+luci-compat \
 	+luci-lib-docker \
-	+docker-ce \
+	+docker \
+	+dockerd \
+	+cgroupfs-mount \
 	+ttyd
 LUCI_PKGARCH:=all
 
