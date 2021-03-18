@@ -15,4 +15,3 @@ uci -q batch <<-EOF >/dev/null
 EOF
 /etc/init.d/smartdns stop 2>/dev/null
 rm -rf /tmp/luci-modulecache /tmp/luci-indexcache*
-exit 0
