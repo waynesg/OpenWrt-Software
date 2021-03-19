@@ -116,7 +116,7 @@ curl_check(){
 		fi
 	fi
 	gen_port
-	J=/var/etc/bypass/by-socks5-check.json
+	J=/var/etc/$NAME/by-socks5-check.json
 	gen_config_file $1
 	IP=127.0.0.1
 	param=
@@ -205,7 +205,7 @@ select_proxy(){
 }
 
 switch_proxy(){
-	/etc/init.d/bypass restart $SERVER_B
+	/etc/init.d/$NAME restart $SERVER_B
 }
 
 [ "$1" = start ] || exit 1
