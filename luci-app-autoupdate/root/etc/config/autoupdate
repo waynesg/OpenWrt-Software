@@ -1,7 +1,0 @@
-config autoupdate
-	option enable '0'
-	option enable_proxy '1'
-	option force_write '0'
-	option week '1'
-	option hour '5'
-	option minute '0'
