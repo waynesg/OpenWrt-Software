@@ -1,12 +1,12 @@
-# Copyright (C) 2020 Hyy2001X <https://github.com/Hyy2001X>
+# Copyright (C) 2020-2021 Hyy2001X <https://github.com/Hyy2001X>
 
 include $(TOPDIR)/rules.mk
 
-LUCI_TITLE:=LuCI Support for AutoBuild Firmware/AutoUpdate.sh
-LUCI_DEPENDS:=+curl +wget +bash
+LUCI_TITLE:=LuCI Support for AutoUpdate.sh
+LUCI_DEPENDS:=+bash
 LUCI_PKGARCH:=all
-PKG_VERSION:=1
-PKG_RELEASE:=20210221
+PKG_VERSION:=1.0
+PKG_RELEASE:=20210812
 
 include $(TOPDIR)/feeds/luci/luci.mk
 
