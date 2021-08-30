@@ -13,7 +13,7 @@ translate("「Server酱」，英文名「ServerChan」，是一款从服务器�
 .. [[</a>]]
 )
 
-m:section(SimpleSection).template  = "serverchan/status"
+m:section(SimpleSection).template  = "serverchan/serverchan_status"
 
 s=m:section(NamedSection,"serverchan","serverchan",translate(""))
 s:tab("basic", translate("基本设置"))
@@ -173,11 +173,18 @@ for _, iface in ipairs(ifaces) do
 end
 a.description = translate("<br/>一般选择 wan 接口，多拨环境请自行选择")
 
-a= s:taboption("content", DynamicList, "ipv4_URL", "URL 地址")
-a.rmempty = true
+a=s:taboption("content", TextValue, "ipv4_list", translate("ipv4 api列表"))
+a.optional = false
+a.rows = 8
+a.wrap = "soft"
+a.cfgvalue = function(self, section)
+    return fs.readfile("/usr/bin/serverchan/api/ipv4.list")
+end
+a.write = function(self, section, value)
+    fs.writefile("/usr/bin/serverchan/api/ipv4.list", value:gsub("\r\n", "\n"))
+end
+a.description = translate("<br/>会因服务器稳定性、连接频繁等原因导致获取失败<br/>如接口可以正常获取 IP，不推荐使用<br/>从以上列表中随机地址访问")
 a:depends({serverchan_ipv4="2"})
-a.description = translate("<br/>会因服务器稳定性、连接频繁等原因导致获取失败<br/>从以上列表中随机一个地址，留空使用默认地址")
-
 
 a=s:taboption("content", ListValue,"serverchan_ipv6",translate("ipv6 变动通知"))
 a.rmempty = true
@@ -202,10 +209,19 @@ for _, iface in ipairs(ifaces) do
 end
 a.description = translate("<br/>一般选择 wan 接口，多拨环境请自行选择")
 
-a= s:taboption("content", DynamicList, "ipv6_URL", "URL 地址")
-a.rmempty = true
+a=s:taboption("content", TextValue, "ipv6_list", translate("ipv6 api列表"))
+a.optional = false
+a.rows = 8
+a.wrap = "soft"
+a.cfgvalue = function(self, section)
+    return fs.readfile("/usr/bin/serverchan/api/ipv6.list")
+end
+a.write = function(self, section, value)
+    fs.writefile("/usr/bin/serverchan/api/ipv6.list", value:gsub("\r\n", "\n"))
+end
+a.description = translate("<br/>会因服务器稳定性、连接频繁等原因导致获取失败<br/>如接口可以正常获取 IP，不推荐使用<br/>从以上列表中随机地址访问")
 a:depends({serverchan_ipv6="2"})
-a.description = translate("<br/>会因服务器稳定性、连接频繁等原因导致获取失败<br/>从以上列表中随机一个地址，留空使用默认地址")
+
 
 a=s:taboption("content", Flag,"serverchan_up",translate("设备上线通知"))
 a.default=1
