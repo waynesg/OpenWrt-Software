@@ -1,6 +1,8 @@
 
 
 应用过滤是一款基于OpenWrt的家长管理插件，支持游戏、视频、聊天、下载等app过滤  
+这是5.x源码，只对重大bug进行修复。
+
 ### 如何编译应用过滤固件
 1. 准备OpenWrt源码，并编译成功  
    推荐源码仓库：  
@@ -17,12 +19,18 @@ git clone https://github.com/destan19/OpenAppFilter.git package/OpenAppFilter
 2. 关闭软硬加速、广告过滤、QOS、多WAN等涉及到nf_conn mark的模块  
 3. 开启应用过滤并选择需要过滤的app即可生效  
 
+### 为什么不持续开源？
+1. 技术领域太垂直，没有几个真正开发人员参与。  
+2. 用该源码的基本上是刷机人员，只是为了编译固件，并且编译可能还一大堆疑问。  
+3. 提供ipk安装方式和固件，这样更方便广大爱好者使用。  
+4. 该插件还有很多需要优化的地方，需要系统级别去有优化和开发，比如基于app的限速、多规则等，很难继续适配通用openwrt。  
+
+
 ### 如何自定义特征码
 https://zhuanlan.zhihu.com/p/419053529  
 
 ### 固件和特征库下载地址
 https://destan19.github.io    
-如果访问不了，可以切换4G网络或者运营商，部分网络屏蔽了github.io  
 
 ### 演示视频 
 https://www.bilibili.com/video/BV1ZL41137aT/
@@ -33,11 +41,9 @@ https://github.com/destan19/openfros
 2. 在release中下载ipk文件直接安装  
 
 ### OpenWrt应用过滤交流群
-群号： 943396288
-点击链接加入群聊【OpenWrt交流群(OAF)】：   
-https://jq.qq.com/?_wv=1027&k=TqQ6VvtV
+群号： 868508199
 
-
+点击链接加入群聊【OpenWrt技术交流】：https://jq.qq.com/?_wv=1027&k=GRkd86no
 
 App filtering is a parent management plug-in based on OpenWrt, which supports app filtering for games, videos, chats, downloads, etc.
 ### How to compile application filtering firmware
