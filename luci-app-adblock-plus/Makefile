@@ -52,8 +52,6 @@ define Package/$(PKG_NAME)/install
 	$(INSTALL_BIN) ./root/etc/uci-defaults/* $(1)/etc/uci-defaults/
 	$(INSTALL_DIR) $(1)/usr/share/adblock
 	$(INSTALL_BIN) ./root/usr/share/adblock/* $(1)/usr/share/adblock/
-	$(INSTALL_DIR) $(1)/usr/share/rpcd/acl.d
-	$(INSTALL_DATA) ./root/acl.d/* $(1)/usr/share/rpcd/acl.d/
 endef
 
 $(eval $(call BuildPackage,$(PKG_NAME)))
