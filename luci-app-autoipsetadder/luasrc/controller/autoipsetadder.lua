@@ -4,7 +4,7 @@ local fs=require"nixio.fs"
 local sys=require"luci.sys"
 local uci=require"luci.model.uci".cursor()
 function index()
-	entry({"admin","services","autoipsetadder"},firstchild(),_("autoipsetadder"),30).dependent=true
+	entry({"admin","services","autoipsetadder"},firstchild(),_("自动设置IP"),30).dependent=true
 	entry({"admin","services","autoipsetadder","autoipsetadder"},cbi("autoipsetadder"),_("Base Setting"),1)
     entry({"admin","services","autoipsetadder","status"},call("act_status")).leaf=true
 	entry({"admin", "services", "autoipsetadder", "getlog"}, call("get_log"))
