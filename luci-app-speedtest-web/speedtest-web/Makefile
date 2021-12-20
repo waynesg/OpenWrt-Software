@@ -2,7 +2,7 @@
 
 include $(TOPDIR)/rules.mk
 
-PKG_NAME:=speedtest
+PKG_NAME:=speedtest-web
 PKG_VERSION:=1.1.5
 PKG_RELEASE:=$(AUTORELESE)
 
