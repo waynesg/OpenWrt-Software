@@ -4,7 +4,7 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=webd
-PKG_VERSION:=20220110
+PKG_VERSION:=20220124
 PKG_RELEASE:=$(AUTORELESE)
 
 include $(INCLUDE_DIR)/package.mk
@@ -18,8 +18,7 @@ define Package/$(PKG_NAME)
 endef
 
 define Package/$(PKG_NAME)/description
-	webd - A Lightweight self-hosted netdisk application [Closed Source]
-	Maybe not safe
+	webd - A Lightweight self-hosted netdisk application
 endef
 
 ifeq ($(ARCH)-$(BOARD),arm-kirkwood)
@@ -87,6 +86,8 @@ endef
 define Package/$(PKG_NAME)/install
 	$(INSTALL_DIR) $(1)/usr/bin
 	$(INSTALL_BIN) $(UNTAR_DIR)/webd/webd $(1)/usr/bin
+	$(INSTALL_DIR) $(1)/usr/share/$(PKG_NAME)
+	$(INSTALL_BIN) $(UNTAR_DIR)/webd/web/.player.htm $(1)/usr/share/$(PKG_NAME)
 endef
 
 $(eval $(call BuildPackage,$(PKG_NAME)))
