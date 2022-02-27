@@ -1,0 +1,12 @@
+#!/bin/sh
+
+# modify /etc/config/ucitrack
+uci -q batch <<-EOF >/dev/null
+	delete ucitrack.@whistle[-1]
+	add ucitrack whistle
+	set ucitrack.@whistle[-1].init='whistle-server'
+	commit ucitrack
+EOF
+
+rm -f /tmp/luci-indexcache
+exit 0

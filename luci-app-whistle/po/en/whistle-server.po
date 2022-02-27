@@ -1,0 +1,75 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2022-2-19 22:59:09\n"
+"Last-Translator: fjqingyou <fjqingyou@gmail.com>\n"
+"Language-Team: null\n"
+"Language: en\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: applications/luci-app-whistle/luasrc/model/cbi/whistle.lua:21
+msgid "whistle proxy config"
+msgstr ""
+
+#: applications/luci-app-whistle/luasrc/model/cbi/whistle.lua:23
+msgid "your need install whistle"
+msgstr ""
+
+#: applications/luci-app-whistle/luasrc/model/cbi/whistle.lua:33
+msgid "whistle starting, plaese wait"
+msgstr ""
+
+#: applications/luci-app-whistle/luasrc/model/cbi/whistle.lua:35
+msgid "Open Web Interface"
+msgstr ""
+
+#: applications/luci-app-whistle/luasrc/model/cbi/whistle.lua:39
+msgid "Whistle"
+msgstr ""
+
+
+#: applications/luci-app-whistle/luasrc/model/cbi/whistle.lua:44
+msgid "Basic Options"
+msgstr ""
+
+
+#: applications/luci-app-whistle/luasrc/model/cbi/whistle.lua:49
+#: applications/luci-app-whistle/luasrc/model/cbi/whistle.lua:76
+msgid "Enabled"
+msgstr ""
+
+
+#: applications/luci-app-whistle/luasrc/model/cbi/whistle.lua:55
+msgid "host"
+msgstr ""
+
+
+#: applications/luci-app-whistle/luasrc/model/cbi/whistle.lua:60
+msgid "port"
+msgstr ""
+
+
+#: applications/luci-app-whistle/luasrc/model/cbi/whistle.lua:66
+msgid "cert_dir"
+msgstr "custom cert dir"
+
+
+#: applications/luci-app-whistle/luasrc/model/cbi/whistle.lua:66
+msgid "cert_dir_description"
+msgstr "User defined certificate Directory - Optional: for development. Individual users generally do not need to modify it"
+
+
+
+#: applications/luci-app-whistle/luasrc/model/cbi/whistle.lua:71
+msgid "Authentication"
+msgstr ""
+
+#: applications/luci-app-whistle/luasrc/model/cbi/whistle.lua:83
+msgid "username"
+msgstr "user name"
+
+#: applications/luci-app-whistle/luasrc/model/cbi/whistle.lua:87
+msgid "password"
+msgstr ""
+
+
