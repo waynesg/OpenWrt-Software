@@ -36,17 +36,14 @@ o.default = 0
 o.rmempty=false
 
 o = s:option(Value, "custome_cron", translate("Custome Cron"))
-o.rmempty = false
 o:depends("custome_cors_enabled", 1)
 
 hour = s:option(Value, "hour", translate("Hour"))
 hour.datatype = "range(0,23)"
-hour.rmempty = false
 hour:depends("custome_cors_enabled", 0)
 
 minute = s:option(Value, "minute", translate("Minute"))
 minute.datatype = "range(0,59)"
-minute.rmempty = false
 minute:depends("custome_cors_enabled", 0)
 
 o = s:option(ListValue, "proxy_mode", translate("Proxy Mode"))
@@ -225,11 +222,6 @@ function tvIPs.cfgvalue(e,e)
 	return sylogtext
 end
 tvIPs.write=function(e,e,e)
-end
-
-local e = luci.http.formvalue("cbi.apply")
-if e then
-  io.popen("/etc/init.d/cloudflarespeedtest restart")
 end
 
 return m
