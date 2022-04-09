@@ -41,6 +41,9 @@
 # 常见问题
 安装 luci-app-whistle、以及 i18n 时会提示：uci: Entry not found。这个未找到解决方案。不过不影响使用，暂时可以无视
 
+# 依赖环境
+node、whistle、whereis
+
 # issuse
 如果是 luci-app-whistle 相关问题，可以到 [issues](https://github.com/fjqingyou/luci-app-whistle/issues) 进行提交
 

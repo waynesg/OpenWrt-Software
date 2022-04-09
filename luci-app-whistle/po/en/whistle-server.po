@@ -11,7 +11,7 @@ msgstr ""
 msgid "whistle proxy config"
 msgstr ""
 
-#: applications/luci-app-whistle/luasrc/model/cbi/whistle.lua:23
+#: applications/luci-app-whistle/luasrc/model/cbi/whistle.lua:25
 msgid "your need install whistle"
 msgstr ""
 

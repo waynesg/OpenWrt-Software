@@ -19,16 +19,16 @@ end
 
 --header
 local header = translate("whistle proxy config");
+header = header .. "<br /><br /><a href=\"https://github.com/avwo/whistle\" target=\"_blank\">whistle</a>";
+header = header .. "<br /><br /><a href=\"https://github.com/fjqingyou/luci-app-whistle\" target=\"_blank\">luci-app-whistle</a>" ;
 if not hasInstall then
     header = header .. "<br /><br /><span style=\"color:red;\">" .. translate("your need install whistle") .. "</span>";
 end
-header = header .. "<br /><br /><a href=\"https://github.com/avwo/whistle\" target=\"_blank\">whistle</a>";
-header = header .. "<br /><br /><a href=\"https://github.com/fjqingyou/luci-app-whistle\" target=\"_blank\">luci-app-whistle</a>" ;
 
 if running then
     local port = uci:get_first("whistle", "whistle", "port") or 8899
     local url = "http://" .. localIPDrivce .. ":" .. port .. "/";
-    local listenFinishd = (sys.call("netstat -anp | grep tcp | grep LISTEN | grep " .. localIP .. ":" .. port) == 0);
+    local listenFinishd = (sys.call("netstat -anp | grep tcp | grep LISTEN | grep " .. localIP .. ":" .. port .. " > /dev/null") == 0);
     if not listenFinishd then
         header = header .. "<br /><br /><span style=\"color:red;\">" .. translate("whistle starting, plaese wait") .. "</span>";
     else

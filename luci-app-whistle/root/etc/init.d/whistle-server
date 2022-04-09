@@ -39,7 +39,7 @@ start() {
     fi
 
     # 自定义证书目录
-    export certDir=$(uci get whistle.config.certDir);
+    export certDir=$(uci get whistle.config.cert_dir);
     if [ -n $certDir ] ; then
         commandParam="$commandParam -z \"$certDir\"";
     fi

@@ -8,5 +8,18 @@ uci -q batch <<-EOF >/dev/null
 	commit ucitrack
 EOF
 
+# write default config
+export configFilePath=/etc/config/whistle;
+if [ ! -f $configFilePath ] ; then
+cat > $configFilePath <<EOF
+config whistle config
+    option host '0.0.0.0'
+    option port 8899
+    option enabled 'true'
+    option cert_dir '~/.WhistleAppData/custom_certs/'
+    option auth_enabled 'false'
+EOF
+fi
+
 rm -f /tmp/luci-indexcache
 exit 0
