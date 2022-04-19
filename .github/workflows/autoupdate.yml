@@ -5,7 +5,7 @@ on:
   # push:
   #   paths:
   #     - '.github\workflows\autoupdate.yml'
-  #     - 'openwrt-diy/update.sh'
+  #     - '~/openwrt-diy/update.sh'
   # watch:
   #   types: started
   schedule:
