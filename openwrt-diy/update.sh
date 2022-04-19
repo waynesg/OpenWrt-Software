@@ -208,7 +208,7 @@ svn co https://github.com/sbwml/openwrt-alist/trunk ./luci-app-alist
 mv ./luci-app-alist/luci-app-alist/po/zh_Hans ./luci-app-alist/luci-app-alist/po/zh-cn
 
 #telegrambot
-svn co https://github.com/alexwbaule/telegramopenwrt/trunk ./telegramopenwrt
+svn co https://github.com/alexwbaule/telegramopenwrt/trunk ./openwrt-telegram
 
 rm -rf ./*/.git & rm -f ./*/.gitattributes
 rm -rf ./*/.svn & rm -rf ./*/.github & rm -rf ./*/.gitignore
