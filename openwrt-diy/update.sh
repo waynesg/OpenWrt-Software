@@ -1,5 +1,8 @@
 #!/bin/bash
-
+function mvdir() {
+mv -n `find $1/* -maxdepth 0 -type d` ./
+rm -rf $1
+}
 #svn co https://github.com/waynesg/github-actions-build-openwrt/trunk/build/Lede_x86_64/diy/package/base-files/files/etc ./settings
 #svn co https://github.com/waynesg/github-actions-build-openwrt/trunk/build/Lede_x86_64/files/etc ./settings/etc
 
