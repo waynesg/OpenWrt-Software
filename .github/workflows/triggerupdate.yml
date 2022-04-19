@@ -55,12 +55,13 @@ jobs:
       env:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
       run: |
-        [ -e $GITHUB_WORKSPACE/LICENSE ] && cp $GITHUB_WORKSPACE/LICENSE $GITHUB_WORKSPACE/${{matrix.target}}
-        [ -e $GITHUB_WORKSPACE/README.md ] && cp $GITHUB_WORKSPACE/README.md $GITHUB_WORKSPACE/${{matrix.target}}
+        [ -e $GITHUB_WORKSPACE/README/LICENSE ] && cp $GITHUB_WORKSPACE/README/LICENSE $GITHUB_WORKSPACE/${{matrix.target}}
+        [ -e $GITHUB_WORKSPACE/README/${{matrix.target}}/README.md ] && cp $GITHUB_WORKSPACE/README/${{matrix.target}}/README.md $GITHUB_WORKSPACE/${{matrix.target}}
         cd $GITHUB_WORKSPACE/${{matrix.target}}
+        Emoji=("🎉" "🤞" "✨" "🎁" "🎈" "🎄" "🎨" "💋" "🍓" "🍕" "🍉" "💐" "🌴" "🚀" "🛸" "🗽" "⛅" "🌈" "🔥" "⛄" "🐶" "🏅" "🦄" "🐤")
         git add .
-        git commit -m "trigger update $(TZ='Asia/Shanghai' date -d now)"
-        git push --quiet "https://${{ secrets.ACCESS_TOKEN }}@github.com/waynesg/OpenWrt-Software.git" HEAD:${{matrix.target}}
+        git commit -m "${Emoji[$[$RANDOM % ${#Emoji[@]}]]}手动同步于$(TZ='Asia/Shanghai' date +%Y年%m月%d号-%H点%M分)"
+        git push --quiet "https://${{ secrets.REPO_TOKEN }}@github.com/waynesg/OpenWrt-Software.git" HEAD:${{matrix.target}} || exit 0
 
 
     - name: Delete workflow runs
