@@ -1,3 +1,0 @@
-#!/bin/ash
-
-./ctx/cam_kbd >/dev/null
