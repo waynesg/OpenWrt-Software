@@ -212,6 +212,9 @@ mv ./luci-app-alist/luci-app-alist/po/zh_Hans ./luci-app-alist/luci-app-alist/po
 #telegrambot
 #svn co https://github.com/alexwbaule/telegramopenwrt/trunk ./telegramopenwrt
 
+#unblockneteasemusic
+svn co https://github.com/UnblockNeteaseMusic/luci-app-unblockneteasemusic/trunk ./luci-app-unblockneteasemusic
+
 rm -rf ./*/.git & rm -f ./*/.gitattributes
 rm -rf ./*/.svn & rm -rf ./*/.github & rm -rf ./*/.gitignore
 rm -rf ./*/*/.svn
