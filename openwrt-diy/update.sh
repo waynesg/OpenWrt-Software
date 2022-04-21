@@ -26,7 +26,7 @@ svn co https://github.com/QiuSimons/openwrt-mos/trunk ./luci-app-mosdns
 svn co https://github.com/jerrykuku/luci-app-vssr/trunk ./luci-app-vssr
 
 #Bypass
-svn co https://github.com/kiddin9/openwrt-bypass/trunk/luci-app-bypass ./luci-app-bypass
+svn co https://github.com/kiddin9/openwrt-bypass/trunk ./luci-app-bypass
 #svn co https://github.com/kiddin9/openwrt-packages/trunk/tcping ./luci-app-bypass/tcping
 #SSR-PLUS
 svn co https://github.com/fw876/helloworld/trunk ./luci-app-ssr-plus
