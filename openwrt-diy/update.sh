@@ -216,8 +216,8 @@ mv ./luci-app-alist/luci-app-alist/po/zh_Hans ./luci-app-alist/luci-app-alist/po
 #unblockneteasemusic
 svn co https://github.com/UnblockNeteaseMusic/luci-app-unblockneteasemusic/trunk ./luci-app-unblockneteasemusic
 
-#autocore
-svn co https://github.com/sirpdboy/myautocore/trunk/myautocore ./openwrt-diy/autocore
+# autocore
+# svn co https://github.com/sirpdboy/myautocore/trunk/myautocore ./openwrt-diy/autocore
 
 rm -rf ./*/.git & rm -f ./*/.gitattributes
 rm -rf ./*/.svn & rm -rf ./*/.github & rm -rf ./*/.gitignore
