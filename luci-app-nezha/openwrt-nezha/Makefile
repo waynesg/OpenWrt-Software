@@ -52,7 +52,7 @@ ifeq ($(ARCH),aarch64)
 endif
 
 
-PKG_SOURCE:=nezha-agent_linux_$(PKG_ARCH_NEZHA-AGENT).tar.gz
+PKG_SOURCE:=nezha-agent_linux_$(PKG_ARCH_NEZHA-AGENT).zip
 
 PKG_SOURCE_URL:=https://github.com/naiba/nezha/releases/latest/download/
 
@@ -62,7 +62,7 @@ PKG_HASH:=skip
 
 define Build/Prepare
 	mkdir -vp $(TAR_DIR)
-	tar -zxvf $(DL_DIR)/$(PKG_SOURCE) -C $(TAR_DIR)
+	unzip $(DL_DIR)/$(PKG_SOURCE) -d $(TAR_DIR)
 endef
 
 define Build/Configure
