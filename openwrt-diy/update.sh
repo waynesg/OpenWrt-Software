@@ -219,6 +219,9 @@ svn co https://github.com/UnblockNeteaseMusic/luci-app-unblockneteasemusic/trunk
 # autocore
 # svn co https://github.com/sirpdboy/myautocore/trunk/myautocore ./openwrt-diy/autocore
 
+#accesscontrtrol-plus
+svn co https://github.com/kingyond/luci-app-accesscontrol-plus/trunk/luci-app-accesscontrol-plus ./luci-app-accesscontrol-plus
+
 rm -rf ./*/.git & rm -f ./*/.gitattributes
 rm -rf ./*/.svn & rm -rf ./*/.github & rm -rf ./*/.gitignore
 rm -rf ./*/*/.svn
