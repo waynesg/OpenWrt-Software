@@ -189,9 +189,6 @@ svn co https://github.com/Hyy2001X/AutoBuild-Packages/trunk/luci-app-webd ./luci
 
 #shortcut
 svn co https://github.com/doushang/luci-app-shortcutmenu/trunk/luci-app-shortcutmenu ./luci-app-shortcutmenu
-#mail
-svn co https://github.com/Ysurac/openmptcprouter-feeds/trunk/msmtp ./luci-app-mail/msmtp
-svn co https://github.com/Ysurac/openmptcprouter-feeds/trunk/luci-app-mail ./luci-app-mail
 
 #tcpdump
 svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-packet-capture ./luci-app-packet-capture
