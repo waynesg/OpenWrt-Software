@@ -222,6 +222,7 @@ svn co https://github.com/kingyond/luci-app-accesscontrol-plus/trunk/luci-app-ac
 #quickstart
 svn co https://github.com/xiangfeidexiaohuo/openwrt-packages/trunk/linkease/nas-packages-luci/luci-app-quickstart ./luci-app-quickstart
 svn co https://github.com/linkease/nas-packages/trunk/network/services/quickstart ./luci-app-quickstart/quickstart
+svn co https://github.com/linkease/istore/trunk/luci/luci-app-store ./luci-app-store
 
 rm -rf ./*/.git & rm -f ./*/.gitattributes
 rm -rf ./*/.svn & rm -rf ./*/.github & rm -rf ./*/.gitignore
