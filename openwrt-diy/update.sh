@@ -219,6 +219,10 @@ svn co https://github.com/UnblockNeteaseMusic/luci-app-unblockneteasemusic/trunk
 #accesscontrtrol-plus
 svn co https://github.com/kingyond/luci-app-accesscontrol-plus/trunk/luci-app-accesscontrol-plus ./luci-app-accesscontrol-plus
 
+#quickstart
+svn co https://github.com/xiangfeidexiaohuo/openwrt-packages/trunk/linkease/nas-packages-luci/luci-app-quickstart ./luci-app-quickstart
+svn co https://github.com/linkease/nas-packages/trunk/network/services/quickstart ./luci-app-quickstart/quickstart
+
 rm -rf ./*/.git & rm -f ./*/.gitattributes
 rm -rf ./*/.svn & rm -rf ./*/.github & rm -rf ./*/.gitignore
 rm -rf ./*/*/.svn
