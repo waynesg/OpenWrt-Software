@@ -220,13 +220,13 @@ svn co https://github.com/UnblockNeteaseMusic/luci-app-unblockneteasemusic/trunk
 svn co https://github.com/kingyond/luci-app-accesscontrol-plus/trunk/luci-app-accesscontrol-plus ./luci-app-accesscontrol-plus
 
 #quickstart
-svn co https://github.com/linkease/nas-packages-luci/trunk/luci/luci-app-quickstart ./luci-app-quickstart
-svn co https://github.com/linkease/nas-packages/trunk/network/services/quickstart ./luci-app-quickstart/quickstart
-svn co https://github.com/linkease/istore/trunk/luci/luci-app-store ./luci-app-store
-svn co https://github.com/linkease/istore/trunk/luci/luci-lib-taskd ./luci-app-store/luci-lib-taskd
-svn co https://github.com/linkease/istore/trunk/luci/luci-lib-xterm ./luci-app-store/luci-lib-xterm
-svn co https://github.com/linkease/istore/trunk/luci/taskd ./luci-app-store/taskd
-svn co https://github.com/xiangfeidexiaohuo/op-ipkg/trunk/luci-lib-ipkg ./luci-app-store/luci-lib-ipkg
+#svn co https://github.com/linkease/nas-packages-luci/trunk/luci/luci-app-quickstart ./luci-app-quickstart
+#svn co https://github.com/linkease/nas-packages/trunk/network/services/quickstart ./luci-app-quickstart/quickstart
+#svn co https://github.com/linkease/istore/trunk/luci/luci-app-store ./luci-app-store
+#svn co https://github.com/linkease/istore/trunk/luci/luci-lib-taskd ./luci-app-store/luci-lib-taskd
+#svn co https://github.com/linkease/istore/trunk/luci/luci-lib-xterm ./luci-app-store/luci-lib-xterm
+#svn co https://github.com/linkease/istore/trunk/luci/taskd ./luci-app-store/taskd
+#svn co https://github.com/xiangfeidexiaohuo/op-ipkg/trunk/luci-lib-ipkg ./luci-app-store/luci-lib-ipkg
 
 rm -rf ./*/.git & rm -f ./*/.gitattributes
 rm -rf ./*/.svn & rm -rf ./*/.github & rm -rf ./*/.gitignore
