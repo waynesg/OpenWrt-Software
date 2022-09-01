@@ -31,6 +31,7 @@ svn co https://github.com/kiddin9/openwrt-bypass/trunk ./luci-app-bypass
 #SSR-PLUS
 svn co https://github.com/fw876/helloworld/trunk/luci-app-ssr-plus ./luci-app-ssr-plus/luci-app-ssr-plus
 svn co https://github.com/fw876/helloworld/trunk/xray-core ./luci-app-ssr-plus/xray-core
+svn co https://github.com/fw876/helloworld/trunk/lua-neturl ./luci-app-ssr-plus/lua-neturl
 #svn co https://github.com/fw876/helloworld/trunk/xray-core ./xray-core
 #svn co https://github.com/fw876/helloworld/trunk/naiveproxy ./naiveproxy
 #svn co https://github.com/fw876/helloworld/trunk/shadowsocks-rust
