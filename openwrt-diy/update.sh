@@ -30,8 +30,6 @@ svn co https://github.com/kiddin9/openwrt-bypass/trunk ./luci-app-bypass
 #svn co https://github.com/kiddin9/openwrt-packages/trunk/tcping ./luci-app-bypass/tcping
 #SSR-PLUS
 svn co https://github.com/fw876/helloworld/trunk/luci-app-ssr-plus ./luci-app-ssr-plus/luci-app-ssr-plus
-svn co https://github.com/fw876/helloworld/trunk/xray-core ./luci-app-ssr-plus/xray-core
-svn co https://github.com/fw876/helloworld/trunk/lua-neturl ./luci-app-ssr-plus/lua-neturl
 #svn co https://github.com/fw876/helloworld/trunk/xray-core ./xray-core
 #svn co https://github.com/fw876/helloworld/trunk/naiveproxy ./naiveproxy
 #svn co https://github.com/fw876/helloworld/trunk/shadowsocks-rust
@@ -44,8 +42,6 @@ svn co https://github.com/1715173329/gowebdav/trunk ./luci-app-gowebdav/gowebdav
 svn co https://github.com/iamaluckyguy/luci-app-smartinfo/trunk ./luci-app-smartinfo
 #serverchan
 svn co https://github.com/tty228/luci-app-serverchan/trunk ./luci-app-serverchan
-#node-request
-svn co https://github.com/jerrykuku/node-request/trunk ./luci-app-dependece/node-request
 #autotimeset(自动重启，关机)
 svn co https://github.com/sirpdboy/luci-app-autotimeset/trunk ./luci-app-autotimeset
 #poweroff 
@@ -106,6 +102,10 @@ svn co https://github.com/waynesg/luci-app-autoipsetadder/trunk ./luci-app-autoi
 
 # passwall
 svn co https://github.com/xiaorouji/openwrt-passwall/trunk ./luci-app-dependece
+#node-request
+svn co https://github.com/jerrykuku/node-request/trunk ./luci-app-dependece/node-request
+#lua-neturl
+svn co https://github.com/fw876/helloworld/trunk/lua-neturl ./luci-app-dependece/lua-neturl
 #git clone -b luci https://github.com/xiaorouji/openwrt-passwall
 #svn co https://github.com/xiaorouji/openwrt-passwall2/trunk ./openwrt-passwall
 git clone --depth 1 https://github.com/xiaorouji/openwrt-passwall -b luci openwrt-passwall && mvdir openwrt-passwall
