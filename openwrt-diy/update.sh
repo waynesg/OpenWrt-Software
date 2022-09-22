@@ -29,7 +29,7 @@ svn co https://github.com/jerrykuku/luci-app-vssr/trunk ./luci-app-vssr
 svn co https://github.com/kiddin9/openwrt-bypass/trunk ./luci-app-bypass
 #svn co https://github.com/kiddin9/openwrt-packages/trunk/tcping ./luci-app-bypass/tcping
 #SSR-PLUS
-svn co https://github.com/fw876/helloworld/trunk/luci-app-ssr-plus ./luci-app-ssr-plus
+svn co https://github.com/fw876/helloworld/trunk/luci-app-ssr-plus
 #svn co https://github.com/fw876/helloworld/trunk/xray-core ./xray-core
 #svn co https://github.com/fw876/helloworld/trunk/naiveproxy ./naiveproxy
 #svn co https://github.com/fw876/helloworld/trunk/shadowsocks-rust
