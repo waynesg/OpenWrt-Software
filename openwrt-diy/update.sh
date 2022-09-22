@@ -169,8 +169,8 @@ svn co https://github.com/pymumu/luci-app-smartdns/branches/lede ./luci-app-smar
 #Pikpak
 svn co https://github.com/ykxVK8yL5L/pikpak-webdav/trunk/openwrt ./luci-app-pikpak-webdav
 
-svn co https://github.com/koshev-msk/luci-app-telegrambot/trunk ./luci-app-telegrambot
-svn co https://github.com/koshev-msk/openwrt-packages/trunk/packages/net/telegrambot ./luci-app-telegrambot/telegrambot
+svn co https://github.com/koshev-msk/modemfeed/trunk/luci/applications/luci-app-telegrambot ./luci-app-telegrambot
+svn co https://github.com/koshev-msk/modemfeed/trunk/packages/net/telegrambot ./luci-app-telegrambot/telegrambot
 
 svn co https://github.com/esirplayground/openwrt-ethr/trunk ./luci-app-ethr
 
