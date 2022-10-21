@@ -94,9 +94,7 @@ svn co https://github.com/project-openwrt/openwrt/trunk/package/ctcgfw/luci-app-
 svn co https://github.com/zzsj0928/luci-app-pushbot/trunk ./luci-app-pushbot
 #订阅转换subconverter
 svn co https://github.com/tindy2013/openwrt-subconverter/trunk ./luci-app-subconverter
-#librespeed
-svn co https://github.com/ZeaKyX/luci-app-speedtest-web/trunk ./luci-app-speedtest-web
-svn co https://github.com/waynesg/speedtest-web/trunk ./luci-app-speedtest-web/speedtest-web
+
 
 #autoipsetadder
 svn co https://github.com/waynesg/luci-app-autoipsetadder/trunk ./luci-app-autoipsetadder
@@ -126,7 +124,7 @@ svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-cloudflarespee
 svn co https://github.com/immortalwrt-collections/openwrt-cdnspeedtest/trunk/cdnspeedtest ./luci-app-cloudflarespeedtest/cdnspeedtest
 
 #Speedtest
-svn co https://github.com/sirpdboy/netspeedtest/trunk/luci-app-netspeedtest ./luci-app-netspeedtest
+svn co https://github.com/sirpdboy/netspeedtest/trunk ./luci-app-netspeedtest
 
 #Pandownload-fake-server
 #svn co https://github.com/kiddin9/openwrt-packages/trunk/pandownload-fake-server
