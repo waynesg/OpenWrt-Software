@@ -26,14 +26,12 @@ svn co https://github.com/QiuSimons/openwrt-mos/trunk ./luci-app-mosdns
 svn co https://github.com/jerrykuku/luci-app-vssr/trunk ./luci-app-vssr
 
 #Bypass
-svn co https://github.com/kiddin9/openwrt-bypass/trunk ./luci-app-bypass
+svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-bypass ./luci-app-bypass
 #svn co https://github.com/kiddin9/openwrt-packages/trunk/tcping ./luci-app-bypass/tcping
 svn co https://github.com/xiangfeidexiaohuo/op-ipkg/trunk ./luci-app-bypass/luci-lib-ipkg
 #SSR-PLUS
 svn co https://github.com/fw876/helloworld/trunk/luci-app-ssr-plus
-#svn co https://github.com/fw876/helloworld/trunk/xray-core ./xray-core
-#svn co https://github.com/fw876/helloworld/trunk/naiveproxy ./naiveproxy
-#svn co https://github.com/fw876/helloworld/trunk/shadowsocks-rust
+
 #adblock-plus
 #svn co https://github.com/small-5/luci-app-adblock-plus/branches/18.06 ./luci-app-adblock-plus
 #gowedav
@@ -105,6 +103,8 @@ svn co https://github.com/xiaorouji/openwrt-passwall/trunk ./luci-app-dependece
 svn co https://github.com/jerrykuku/node-request/trunk ./luci-app-dependece/node-request
 #lua-neturl
 svn co https://github.com/fw876/helloworld/trunk/lua-neturl ./luci-app-dependece/lua-neturl
+svn co https://github.com/fw876/helloworld/trunk/redsocks2 ./luci-app-dependece/redsock2
+svn co https://github.com/kiddin9/openwrt-packages/trunk/lua-maxminddb ./luci-app-dependece/lua-maxminddb
 #git clone -b luci https://github.com/xiaorouji/openwrt-passwall
 #svn co https://github.com/xiaorouji/openwrt-passwall2/trunk ./openwrt-passwall
 git clone --depth 1 https://github.com/xiaorouji/openwrt-passwall -b luci openwrt-passwall && mvdir openwrt-passwall
