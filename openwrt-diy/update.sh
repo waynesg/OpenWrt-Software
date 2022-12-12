@@ -73,11 +73,13 @@ svn co https://github.com/Lienol/openwrt-package/trunk/luci-app-filebrowser
 #autopoweroff
 svn co https://github.com/siropboy/mypackages/luci-app-autopoweroff/trunk
 #timewol
-svn co https://github.com/siropboy/mypackages/trunk/luci-app-control-timewol
+svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-control-timewol
 #weburl
-svn co https://github.com/siropboy/mypackages/trunk/luci-app-control-weburl
+svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-control-weburl
 #webrestriction
-svn co https://github.com/siropboy/mypackages/trunk/luci-app-control-webrestriction
+svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-control-webrestriction
+#speedlimited
+svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-control-speedlimit
 #ikoolproxy
 svn co https://github.com/iyaof/luci-app-ikoolproxy/trunk ./luci-app-ikoolproxy
 #pptp
