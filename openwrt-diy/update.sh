@@ -126,7 +126,7 @@ svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-cloudflarespee
 svn co https://github.com/immortalwrt-collections/openwrt-cdnspeedtest/trunk/cdnspeedtest ./luci-app-cloudflarespeedtest/cdnspeedtest
 
 #Speedtest
-svn co https://github.com/sirpdboy/sirpdboy-package/trunk/netspeedtest ./luci-app-netspeedtest
+svn co https://github.com/sirpdboy/netspeedtest/trunk ./luci-app-netspeedtest
 
 #Pandownload-fake-server
 #svn co https://github.com/kiddin9/openwrt-packages/trunk/pandownload-fake-server
