@@ -128,8 +128,8 @@ svn co https://github.com/immortalwrt-collections/openwrt-cdnspeedtest/trunk/cdn
 #Speedtest
 #svn co https://github.com/sirpdboy/netspeedtest/trunk ./luci-app-netspeedtest
 svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-netspeedtest ./luci-app-netspeedtest
-svn co https://github.com/kiddin9/openwrt-packages/trunk/speedtest-web ./luci-app-dependece
-svn co https://github.com/kiddin9/openwrt-packages/trunk/speedtestcli ./luci-app-dependece
+svn co https://github.com/kiddin9/openwrt-packages/trunk/speedtest-web ./luci-app-dependece/speedtest-web
+svn co https://github.com/kiddin9/openwrt-packages/trunk/speedtestcli ./luci-app-dependece/speedtestcli
 
 #Pandownload-fake-server
 #svn co https://github.com/kiddin9/openwrt-packages/trunk/pandownload-fake-server
