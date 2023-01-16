@@ -233,4 +233,5 @@ svn co https://github.com/kingyond/luci-app-accesscontrol-plus/trunk/luci-app-ac
 rm -rf ./*/.git & rm -f ./*/.gitattributes
 rm -rf ./*/.svn & rm -rf ./*/.github & rm -rf ./*/.gitignore
 rm -rf ./*/*/.svn
+sed -i 's/"PKG_BUILD_DEPENDS:=golang\/host homebox\/host"/"PKG_BUILD_DEPENDS:=golang\/host homebox\/host upx\/host"/g' ./luci-app-netspeedtest/homebox/Makefile
 exit 0
