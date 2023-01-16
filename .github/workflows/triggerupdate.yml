@@ -61,7 +61,7 @@ jobs:
         git add .
         git commit -m "${Emoji[$[$RANDOM % ${#Emoji[@]}]]}手动同步于$(TZ='Asia/Shanghai' date +%Y年%m月%d号-%H点%M分)"
         git push --quiet "https://${{ secrets.REPO_TOKEN }}@github.com/waynesg/OpenWrt-Software.git" HEAD:${{matrix.target}} || exit 0
-
+        sed -i 's/"PKG_BUILD_DEPENDS:=golang\/host homebox\/host"/"PKG_BUILD_DEPENDS:=golang\/host homebox\/host upx\/host"/g' /luci-app-netspeedtest/homebox/Makefile
 
     - name: Delete workflow runs
       uses: GitRML/delete-workflow-runs@main
