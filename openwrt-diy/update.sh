@@ -221,6 +221,9 @@ svn co https://github.com/UnblockNeteaseMusic/luci-app-unblockneteasemusic/trunk
 #accesscontrtrol-plus
 svn co https://github.com/kingyond/luci-app-accesscontrol-plus/trunk/luci-app-accesscontrol-plus ./luci-app-accesscontrol-plus
 
+#parents-control
+svn co https://github.com/sirpdboy/luci-app-parentcontrol/trunk ./luci-app-parentcontrol
+
 #quickstart
 #svn co https://github.com/linkease/nas-packages-luci/trunk/luci/luci-app-quickstart ./luci-app-quickstart
 #svn co https://github.com/linkease/nas-packages/trunk/network/services/quickstart ./luci-app-quickstart/quickstart
