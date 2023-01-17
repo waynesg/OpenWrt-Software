@@ -20,7 +20,7 @@ svn co https://github.com/kiddin9/luci-theme-edge/branches/18.06 ./luci-theme-ed
 # apps
 
 #mosdns
-svn co https://github.com/QiuSimons/openwrt-mos/trunk ./luci-app-mosdns
+#svn co https://github.com/QiuSimons/openwrt-mos/trunk ./luci-app-mosdns
 
 #VSSR
 svn co https://github.com/jerrykuku/luci-app-vssr/trunk ./luci-app-vssr
