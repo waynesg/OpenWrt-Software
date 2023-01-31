@@ -87,7 +87,7 @@ svn co https://github.com/siropboy/mypackages/trunk/luci-app-pptp-vpnserver-many
 #ipsec
 svn co https://github.com/waynesg/luci-app-ipsec-vpnserver-manyusers/trunk ./luci-app-ipsec-vpnserver-manyusers
 #unblockneteasemusic
-#svn co https://github.com/immortalwrt/luci-app-unblockneteasemusic/trunk ./luci-app-unblockneteasemusic
+git clone -b master https://github.com/UnblockNeteaseMusic/luci-app-unblockneteasemusic ./luci-app-unblockneteasemusic
 #syncthing
 svn co https://github.com/project-openwrt/openwrt/trunk/package/ctcgfw/luci-app-syncthing ./luci-app-syncthing
 #pushbot
