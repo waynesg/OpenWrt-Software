@@ -225,7 +225,7 @@ svn co https://github.com/kingyond/luci-app-accesscontrol-plus/trunk/luci-app-ac
 svn co https://github.com/sirpdboy/luci-app-parentcontrol/trunk ./luci-app-parentcontrol
 
 #msd_lite
-svn co https://github.com/ximiTech/luci-app-msd_lite/trunk ./lcui-app-msd_lite
+svn co https://github.com/ximiTech/luci-app-msd_lite/trunk ./luci-app-msd_lite
 svn co https://github.com/ximiTech/msd_lite/trunk ./luci-app-dependece
 
 #quickstart
