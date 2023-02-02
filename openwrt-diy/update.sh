@@ -224,6 +224,10 @@ svn co https://github.com/kingyond/luci-app-accesscontrol-plus/trunk/luci-app-ac
 #parents-control
 svn co https://github.com/sirpdboy/luci-app-parentcontrol/trunk ./luci-app-parentcontrol
 
+#msd_lite
+svn co https://github.com/ximiTech/luci-app-msd_lite/trunk ./lcui-app-msd_lite
+svn co https://github.com/ximiTech/msd_lite/trunk ./luci-app-dependece
+
 #quickstart
 #svn co https://github.com/linkease/nas-packages-luci/trunk/luci/luci-app-quickstart ./luci-app-quickstart
 #svn co https://github.com/linkease/nas-packages/trunk/network/services/quickstart ./luci-app-quickstart/quickstart
