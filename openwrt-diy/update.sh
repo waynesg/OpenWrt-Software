@@ -226,7 +226,7 @@ svn co https://github.com/sirpdboy/luci-app-parentcontrol/trunk ./luci-app-paren
 
 #msd_lite
 svn co https://github.com/ximiTech/luci-app-msd_lite/trunk ./luci-app-msd_lite
-svn co https://github.com/ximiTech/msd_lite/trunk ./luci-app-dependece
+svn co https://github.com/ximiTech/msd_lite/trunk ./luci-app-dependece/msd_lite
 
 #quickstart
 #svn co https://github.com/linkease/nas-packages-luci/trunk/luci/luci-app-quickstart ./luci-app-quickstart
