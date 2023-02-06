@@ -100,15 +100,14 @@ svn co https://github.com/tindy2013/openwrt-subconverter/trunk ./luci-app-subcon
 svn co https://github.com/waynesg/luci-app-autoipsetadder/trunk ./luci-app-autoipsetadder
 
 # passwall
-svn co https://github.com/xiaorouji/openwrt-passwall/trunk ./luci-app-dependece
+#svn co https://github.com/xiaorouji/openwrt-passwall/trunk ./luci-app-dependece
+git clone -b patches-v2ray-geosite-20230204071506 https://github.com/xiaorouji/openwrt-passwall
 #node-request
 svn co https://github.com/jerrykuku/node-request/trunk ./luci-app-dependece/node-request
 #lua-neturl
 svn co https://github.com/fw876/helloworld/trunk/lua-neturl ./luci-app-dependece/lua-neturl
 svn co https://github.com/fw876/helloworld/trunk/redsocks2 ./luci-app-dependece/redsock2
 svn co https://github.com/kiddin9/openwrt-packages/trunk/lua-maxminddb ./luci-app-dependece/lua-maxminddb
-#git clone -b luci https://github.com/xiaorouji/openwrt-passwall
-#svn co https://github.com/xiaorouji/openwrt-passwall2/trunk ./openwrt-passwall
 git clone --depth 1 https://github.com/xiaorouji/openwrt-passwall -b luci openwrt-passwall && mvdir openwrt-passwall
 git clone --depth 1 https://github.com/xiaorouji/openwrt-passwall2 && mvdir openwrt-passwall2
 
