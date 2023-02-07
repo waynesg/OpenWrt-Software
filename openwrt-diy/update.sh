@@ -205,8 +205,8 @@ svn co https://github.com/jjm2473/openwrt-apps/trunk/luci-app-homebox ./luci-app
 svn co https://github.com/jjm2473/openwrt-apps/trunk/homebox ./luci-app-homebox/homebox
 
 #Alist
-svn co https://github.com/sbwml/openwrt-alist/trunk ./luci-app-alist
-mv ./luci-app-alist/luci-app-alist/po/zh_Hans ./luci-app-alist/luci-app-alist/po/zh-cn
+svn co https://github.com/sbwml/luci-app-alist/trunk ./luci-app-alist
+#mv ./luci-app-alist/luci-app-alist/po/zh_Hans ./luci-app-alist/luci-app-alist/po/zh-cn
 
 #telegrambot
 #svn co https://github.com/alexwbaule/telegramopenwrt/trunk ./telegramopenwrt
