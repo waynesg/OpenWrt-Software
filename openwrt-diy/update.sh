@@ -101,7 +101,7 @@ svn co https://github.com/waynesg/luci-app-autoipsetadder/trunk ./luci-app-autoi
 
 # passwall
 #svn co https://github.com/xiaorouji/openwrt-passwall/trunk ./luci-app-dependece
-git clone -b patches-v2ray-geosite-20230204071506 https://github.com/xiaorouji/openwrt-passwall ./luci-app-dependece
+git clone -b patches-v2ray-geosite-20230207100055 https://github.com/xiaorouji/openwrt-passwall ./luci-app-dependece
 #node-request
 svn co https://github.com/jerrykuku/node-request/trunk ./luci-app-dependece/node-request
 #lua-neturl
