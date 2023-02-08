@@ -101,9 +101,7 @@ svn co https://github.com/waynesg/luci-app-autoipsetadder/trunk ./luci-app-autoi
 
 # passwall
 # svn co https://github.com/xiaorouji/openwrt-passwall/trunk ./luci-app-dependece
-git clone https://github.com/xiaorouji/openwrt-passwall ./openwrt-passwall
-cd openwrt-passwall
-git checkout 4fd4bf8
+
 #node-request
 svn co https://github.com/jerrykuku/node-request/trunk ./luci-app-dependece/node-request
 #lua-neturl
