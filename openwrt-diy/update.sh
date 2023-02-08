@@ -100,15 +100,15 @@ svn co https://github.com/tindy2013/openwrt-subconverter/trunk ./luci-app-subcon
 svn co https://github.com/waynesg/luci-app-autoipsetadder/trunk ./luci-app-autoipsetadder
 
 # passwall
-# svn co https://github.com/xiaorouji/openwrt-passwall/trunk ./luci-app-dependece
-svn co https://github.com/waynesg/passwall/trunk ./luci-app-dependece
+# svn co https://github.com/xiaorouji/openwrt-passwall/trunk ./luci-app-dependence
+git clone https://github.com/waynesg/passwall.git ./luci-app-dependence
 
 #node-request
-svn co https://github.com/jerrykuku/node-request/trunk ./luci-app-dependece/node-request
+svn co https://github.com/jerrykuku/node-request/trunk ./luci-app-dependence/node-request
 #lua-neturl
-svn co https://github.com/fw876/helloworld/trunk/lua-neturl ./luci-app-dependece/lua-neturl
-svn co https://github.com/fw876/helloworld/trunk/redsocks2 ./luci-app-dependece/redsock2
-svn co https://github.com/kiddin9/openwrt-packages/trunk/lua-maxminddb ./luci-app-dependece/lua-maxminddb
+svn co https://github.com/fw876/helloworld/trunk/lua-neturl ./luci-app-dependence/lua-neturl
+svn co https://github.com/fw876/helloworld/trunk/redsocks2 ./luci-app-dependence/redsock2
+svn co https://github.com/kiddin9/openwrt-packages/trunk/lua-maxminddb ./luci-app-dependence/lua-maxminddb
 git clone --depth 1 https://github.com/xiaorouji/openwrt-passwall -b luci openwrt-passwall && mvdir openwrt-passwall
 git clone --depth 1 https://github.com/xiaorouji/openwrt-passwall2 && mvdir openwrt-passwall2
 
@@ -226,7 +226,7 @@ svn co https://github.com/sirpdboy/luci-app-parentcontrol/trunk ./luci-app-paren
 
 #msd_lite
 svn co https://github.com/ximiTech/luci-app-msd_lite/trunk ./luci-app-msd_lite
-svn co https://github.com/ximiTech/msd_lite/trunk ./luci-app-dependece/msd_lite
+svn co https://github.com/ximiTech/msd_lite/trunk ./luci-app-dependence/msd_lite
 
 #quickstart
 #svn co https://github.com/linkease/nas-packages-luci/trunk/luci/luci-app-quickstart ./luci-app-quickstart
