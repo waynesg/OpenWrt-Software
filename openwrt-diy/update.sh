@@ -109,7 +109,8 @@ svn co https://github.com/jerrykuku/node-request/trunk ./luci-app-dependence/nod
 svn co https://github.com/fw876/helloworld/trunk/lua-neturl ./luci-app-dependence/lua-neturl
 svn co https://github.com/fw876/helloworld/trunk/redsocks2 ./luci-app-dependence/redsock2
 svn co https://github.com/kiddin9/openwrt-packages/trunk/lua-maxminddb ./luci-app-dependence/lua-maxminddb
-git clone --depth 1 https://github.com/xiaorouji/openwrt-passwall -b luci openwrt-passwall && mvdir openwrt-passwall
+#git clone --depth 1 https://github.com/xiaorouji/openwrt-passwall -b luci openwrt-passwall && mvdir openwrt-passwall
+git clone --depth 1 https://github.com/xiaorouji/openwrt-passwall -b luci-smartdns-new-version openwrt-passwall && mvdir openwrt-passwall
 git clone --depth 1 https://github.com/xiaorouji/openwrt-passwall2 && mvdir openwrt-passwall2
 
 #iptv
