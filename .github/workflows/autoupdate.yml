@@ -47,7 +47,7 @@ jobs:
         git clone -b ${{matrix.target}} https://github.com/waynesg/OpenWrt-Software.git ${{matrix.target}}
         cd ${{matrix.target}}
         git rm -r --cache * >/dev/null 2>&1 &
-        rm -rf `find ./* -maxdepth 0 -type d ! -name "openwrt-diy"` >/dev/null 2>&1
+        rm -rf `find ./* -maxdepth 0 -type d ! -name "openwrt-diy" ! -name "luci-app-advanced/htdocs/luci-static/resources/fileassistant"` >/dev/null 2>&1
         $GITHUB_WORKSPACE/openwrt-diy/update.sh
 
     - name: Upload
