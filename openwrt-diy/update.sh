@@ -93,7 +93,7 @@ svn co https://github.com/project-openwrt/openwrt/trunk/package/ctcgfw/luci-app-
 #pushbot
 svn co https://github.com/zzsj0928/luci-app-pushbot/trunk ./luci-app-pushbot
 #订阅转换subconverter
-svn co https://github.com/tindy2013/openwrt-subconverter/trunk ./luci-app-subconverter
+#svn co https://github.com/tindy2013/openwrt-subconverter/trunk ./luci-app-subconverter
 
 
 #autoipsetadder
