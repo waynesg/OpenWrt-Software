@@ -73,7 +73,7 @@ svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-cpulimit ./luc
 #filebrowser
 svn co https://github.com/Lienol/openwrt-package/trunk/luci-app-filebrowser
 #fileassistant
-svn co https://github.com/shidahuilang/luci-app-fileassistant/trunk
+svn co https://github.com/shidahuilang/luci-app-fileassistant/trunk ./luci-app-fileassistant
 #autopoweroff
 svn co https://github.com/siropboy/mypackages/luci-app-autopoweroff/trunk
 #timewol
