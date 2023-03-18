@@ -223,6 +223,9 @@ svn co https://github.com/UnblockNeteaseMusic/luci-app-unblockneteasemusic/trunk
 # autocore
 # svn co https://github.com/sirpdboy/myautocore/trunk/myautocore ./openwrt-diy/autocore
 
+# socat
+svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-socat ./luci-app-socat
+
 #accesscontrtrol-plus
 svn co https://github.com/kingyond/luci-app-accesscontrol-plus/trunk/luci-app-accesscontrol-plus ./luci-app-accesscontrol-plus
 
