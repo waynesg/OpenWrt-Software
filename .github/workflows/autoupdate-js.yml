@@ -1,4 +1,4 @@
-name: Trigger Update JS
+name: Auto Update JS
 
 on:
   #push:
@@ -8,7 +8,7 @@ on:
   #watch:
   #  types: started
   schedule:
-    - cron: 0 20 * * *
+    - cron: 10 20 * * *
   repository_dispatch:
 
 env:
