@@ -1,6 +1,7 @@
-name: Trigger Update 1907
+name: Trigger Update JS
 
 on:
+  workflow_dispatch:
   push:
     paths:
       - '.github\workflows\autoupdate.yml'
@@ -9,7 +10,6 @@ on:
     types: started
   # schedule:
   #   - cron: 0 20 * * *
-  repository_dispatch:
 
 env:
   TZ: Asia/Shanghai
