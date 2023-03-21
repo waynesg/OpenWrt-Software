@@ -9,6 +9,7 @@ on:
     types: started
   # schedule:
   #   - cron: 0 20 * * *
+  repository_dispatch:
 
 env:
   TZ: Asia/Shanghai
