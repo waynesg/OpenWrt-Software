@@ -53,7 +53,7 @@ svn co https://github.com/siropboy/sirpdboy-package/trunk/netdata ./luci-app-net
 #OAF
 svn co https://github.com/destan19/OpenAppFilter/trunk ./luci-app-oaf
 #OpenClash
-svn co https://github.com/vernesong/OpenClash/trunk/luci-app-openclash
+#svn co https://github.com/vernesong/OpenClash/trunk/luci-app-openclash
 #svn co https://github.com/Lienol/openwrt-packages/trunk/net/https-dns-proxy
 #svn co https://github.com/Lienol/openwrt-packages/trunk/net/haproxy
 #eqos
@@ -103,6 +103,7 @@ svn co https://github.com/xiaorouji/openwrt-passwall/trunk ./luci-app-dependence
 
 #node-request
 svn co https://github.com/jerrykuku/node-request/trunk ./luci-app-dependence/node-request
+svn co https://github.com/coolsnowwolf/packages/trunk/net/kcptun ./luci-app-dependence/kcptun
 #lua-neturl
 svn co https://github.com/fw876/helloworld/trunk/lua-neturl ./luci-app-dependence/lua-neturl
 svn co https://github.com/fw876/helloworld/trunk/redsocks2 ./luci-app-dependence/redsock2
@@ -163,7 +164,8 @@ svn co https://github.com/Erope/openwrt_nezha/trunk/luci-app-nezha ./luci-app-ne
 svn co https://github.com/Erope/openwrt_nezha/trunk/openwrt-nezha ./luci-app-nezha/openwrt-nezha
 
 #Smartdns
-svn co https://github.com/pymumu/luci-app-smartdns/branches/lede ./luci-app-smartdns
+git clone -b master https://github.com/pymumu/luci-app-smartdns ./luci-app-smartdns
+#svn co https://github.com/pymumu/luci-app-smartdns/branches/lede ./luci-app-smartdns
 #svn co https://github.com/pymumu/openwrt-smartdns/trunk ./luci-app-smartdns/smartdns
 
 #Pikpak
@@ -233,6 +235,9 @@ svn co https://github.com/ximiTech/msd_lite/trunk ./luci-app-dependence/msd_lite
 #svn co https://github.com/linkease/istore/trunk/luci/taskd ./luci-app-store/taskd
 #svn co https://github.com/xiangfeidexiaohuo/op-ipkg/trunk/luci-lib-ipkg ./luci-app-store/luci-lib-ipkg
 
+#Lienol branches
+git clone -b new-openvpn-luci https://github.com/Lienol/openwrt-package/luci-app-openvpn-server ./luci-app-openvpn-server
+git clone -b new-openvpn-luci https://github.com/Lienol/openwrt-package/luci-app-openvpn-client ./luci-app-openvpn-client
 rm -rf ./*/.git & rm -f ./*/.gitattributes
 rm -rf ./*/.svn & rm -rf ./*/.github & rm -rf ./*/.gitignore
 rm -rf ./*/*/.svn
