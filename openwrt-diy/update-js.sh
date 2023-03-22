@@ -236,8 +236,9 @@ svn co https://github.com/ximiTech/msd_lite/trunk ./luci-app-dependence/msd_lite
 #svn co https://github.com/xiangfeidexiaohuo/op-ipkg/trunk/luci-lib-ipkg ./luci-app-store/luci-lib-ipkg
 
 #Lienol branches
-git clone -b new-openvpn-luci https://github.com/Lienol/openwrt-package/luci-app-openvpn-server ./luci-app-openvpn-server
-git clone -b new-openvpn-luci https://github.com/Lienol/openwrt-package/luci-app-openvpn-client ./luci-app-openvpn-client
+svn co https://github.com/Lienol/openwrt-package/luci-app-openvpn-server/branches/new-openvpn-luci ./luci-app-openvpn-server
+svn co https://github.com/Lienol/openwrt-package/luci-app-openvpn-client/branches/new-openvpn-luci ./luci-app-openvpn-client
+
 rm -rf ./*/.git & rm -f ./*/.gitattributes
 rm -rf ./*/.svn & rm -rf ./*/.github & rm -rf ./*/.gitignore
 rm -rf ./*/*/.svn
