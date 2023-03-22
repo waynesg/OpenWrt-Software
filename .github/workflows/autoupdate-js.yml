@@ -47,6 +47,8 @@ jobs:
         cd ${{matrix.target}}
         git rm -r --cache * >/dev/null 2>&1 &
         rm -rf `find ./* -maxdepth 0 -type d ! -name "openwrt-diy"` >/dev/null 2>&1
+        rm -rf `find ./* -maxdepth 0 -type d ! -name "luci-app-openvpn-server"` >/dev/null 2>&1
+        rm -rf `find ./* -maxdepth 0 -type d ! -name "luci-app-openvpn-client"` >/dev/null 2>&1
         $GITHUB_WORKSPACE/openwrt-diy/update-js.sh
 
     - name: Upload
