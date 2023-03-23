@@ -197,7 +197,7 @@ svn co https://github.com/doushang/luci-app-shortcutmenu/trunk/luci-app-shortcut
 svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-packet-capture ./luci-app-packet-capture
 
 #tn-netports
-svn co https://github.com/waynesg/luci-app-netports/trunk ./luci-app-netports
+svn co https://github.com/waynesg/luci-app-tn-netports/trunk ./luci-app-tn-netports
 
 #whistle
 svn co https://github.com/fjqingyou/luci-app-whistle/trunk ./luci-app-whistle
