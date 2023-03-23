@@ -1,3 +1,3 @@
 # OpenWrt-Software
 OpenWRT applications collection
-## For 19.07
+## For OpenWrt>=19.07
