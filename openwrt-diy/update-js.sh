@@ -11,7 +11,7 @@ svn co https://github.com/jerrykuku/luci-app-argon-config/trunk ./luci-app-argon
 svn co https://github.com/gngpp/luci-app-design-config/trunk ./luci-app-design-config
 
 # theme
-svn co https://github.com/jerrykuku/luci-theme-argon/trunk ./luci-theme-argon
+git clone -b master https://github.com/jerrykuku/luci-theme-argon ./luci-theme-argon
 svn co https://github.com/siropboy/sirpdboy-package/trunk/luci-theme-opentomcat
 svn co https://github.com/sirpdboy/luci-theme-opentopd/trunk ./luci-theme-opentopd
 svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-theme-atmaterial
@@ -164,7 +164,7 @@ svn co https://github.com/Erope/openwrt_nezha/trunk/luci-app-nezha ./luci-app-ne
 svn co https://github.com/Erope/openwrt_nezha/trunk/openwrt-nezha ./luci-app-nezha/openwrt-nezha
 
 #Smartdns
-git clone -b master https://github.com/pymumu/luci-app-smartdns ./luci-app-smartdns
+#git clone -b master https://github.com/pymumu/luci-app-smartdns ./luci-app-smartdns
 #svn co https://github.com/pymumu/luci-app-smartdns/branches/lede ./luci-app-smartdns
 #svn co https://github.com/pymumu/openwrt-smartdns/trunk ./luci-app-smartdns/smartdns
 
@@ -235,8 +235,12 @@ svn co https://github.com/ximiTech/msd_lite/trunk ./luci-app-dependence/msd_lite
 #svn co https://github.com/linkease/istore/trunk/luci/taskd ./luci-app-store/taskd
 #svn co https://github.com/xiangfeidexiaohuo/op-ipkg/trunk/luci-lib-ipkg ./luci-app-store/luci-lib-ipkg
 
-git clone --depth 1 -b new-openvpn-Luci https://github.com/Lienol/openwrt-package.git luci-app-openvpn-server
-git clone --depth 1 -b new-openvpn-Luci https://github.com/Lienol/openwrt-package.git luci-app-openvpn-client
+#Lean
+svn co https://github.com/coolsnowwolf/luci/trunk/applications/luci-app-diskman ./luci-app-diskman
+svn co https://github.com/coolsnowwolf/luci/trunk/applications/luci-app-vsftpd ./luci-app-vsftpd
+svn co https://github.com/coolsnowwolf/luci/trunk/applications/luci-app-usb-printer ./luci-app-usb-printer
+svn co https://github.com/coolsnowwolf/luci/trunk/applications/luci-app-zerotier ./luci-app-zerotier
+svn co https://github.com/coolsnowwolf/luci/trunk/applications/luci-app-turboacc ./luci-app-turboacc
 
 rm -rf ./*/.git & rm -f ./*/.gitattributes
 rm -rf ./*/.svn & rm -rf ./*/.github & rm -rf ./*/.gitignore
