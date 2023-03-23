@@ -6,7 +6,7 @@
 #
 include $(TOPDIR)/rules.mk
 
-LUCI_NAME:=luci-app-netports
+LUCI_NAME:=luci-app-tn-netports
 PKG_VERSION:=2.0.3
 
 LUCI_TITLE:=Network Interfaces Ports Status
