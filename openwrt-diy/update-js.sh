@@ -241,6 +241,7 @@ svn co https://github.com/coolsnowwolf/luci/trunk/applications/luci-app-vsftpd .
 svn co https://github.com/coolsnowwolf/luci/trunk/applications/luci-app-usb-printer ./luci-app-usb-printer
 svn co https://github.com/coolsnowwolf/luci/trunk/applications/luci-app-zerotier ./luci-app-zerotier
 svn co https://github.com/coolsnowwolf/luci/trunk/applications/luci-app-turboacc ./luci-app-turboacc
+svn co https://github.com/coolsnowwolf/luci/trunk/applications/luci-app-socat ./luci-app-socat
 
 rm -rf ./*/.git & rm -f ./*/.gitattributes
 rm -rf ./*/.svn & rm -rf ./*/.github & rm -rf ./*/.gitignore
