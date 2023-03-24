@@ -48,8 +48,8 @@ svn co https://github.com/sirpdboy/luci-app-autotimeset/trunk ./luci-app-autotim
 #poweroff 
 svn co https://github.com/esirplayground/luci-app-poweroff/trunk ./luci-app-poweroff
 #netdata
-svn co https://github.com/siropboy/sirpdboy-package/trunk/luci-app-netdata ./luci-app-netdata
-svn co https://github.com/siropboy/sirpdboy-package/trunk/netdata ./luci-app-netdata/netdata
+svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-netdata ./luci-app-netdata
+svn co https://github.com/sirpdboy/sirpdboy-package/trunk/netdata ./luci-app-netdata/netdata
 #OAF
 svn co https://github.com/destan19/OpenAppFilter/trunk ./luci-app-oaf
 #OpenClash
@@ -64,9 +64,6 @@ svn co https://github.com/littletao08/luci-app-eqos/trunk ./luci-app-eqos
 #advanced
 svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-advanced
 
-#speedlimited
-svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-control-speedlimit
-
 #cpulimited
 svn co https://github.com/kiddin9/openwrt-packages/trunk/cpulimit ./luci-app-cpulimit/cpulimit
 svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-cpulimit ./luci-app-cpulimit
@@ -75,13 +72,16 @@ svn co https://github.com/Lienol/openwrt-package/trunk/luci-app-filebrowser
 #fileassistant
 svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-fileassistant
 #autopoweroff
-svn co https://github.com/siropboy/mypackages/luci-app-autopoweroff/trunk
+svn co https://github.com/sirpboy/mypackages/luci-app-autopoweroff/trunk
 #speedlimited
 svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-control-speedlimit
+svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-control-timewol
+svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-control-webrestriction
+svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-control-weburl
 #ikoolproxy
 svn co https://github.com/iyaof/luci-app-ikoolproxy/trunk ./luci-app-ikoolproxy
 #pptp
-svn co https://github.com/siropboy/mypackages/trunk/luci-app-pptp-vpnserver-manyusers
+svn co https://github.com/sirpboy/mypackages/trunk/luci-app-pptp-vpnserver-manyusers
 #ipsec
 svn co https://github.com/waynesg/luci-app-ipsec-vpnserver-manyusers/trunk ./luci-app-ipsec-vpnserver-manyusers
 #unblockneteasemusic
@@ -203,8 +203,10 @@ svn co https://github.com/waynesg/luci-app-tn-netports/trunk ./luci-app-tn-netpo
 svn co https://github.com/fjqingyou/luci-app-whistle/trunk ./luci-app-whistle
 
 #homebox
-svn co https://github.com/jjm2473/openwrt-apps/trunk/luci-app-homebox ./luci-app-homebox
-svn co https://github.com/jjm2473/openwrt-apps/trunk/homebox ./luci-app-homebox/homebox
+#svn co https://github.com/jjm2473/openwrt-apps/trunk/luci-app-homebox ./luci-app-homebox
+#svn co https://github.com/jjm2473/openwrt-apps/trunk/homebox ./luci-app-homebox/homebox
+svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-homebox ./luci-app-homebox
+svn co https://github.com/kiddin9/openwrt-packages/trunk/homebox ./luci-app-homebox/homebox
 
 #Alist
 svn co https://github.com/sbwml/luci-app-alist/trunk ./luci-app-alist
@@ -224,13 +226,13 @@ svn co https://github.com/ximiTech/luci-app-msd_lite/trunk ./luci-app-msd_lite
 svn co https://github.com/ximiTech/msd_lite/trunk ./luci-app-dependence/msd_lite
 
 #Lean
-svn co https://github.com/coolsnowwolf/luci/trunk/applications/luci-app-diskman ./luci-app-diskman
-svn co https://github.com/coolsnowwolf/luci/trunk/applications/luci-app-vsftpd ./luci-app-vsftpd
-svn co https://github.com/coolsnowwolf/luci/trunk/applications/luci-app-usb-printer ./luci-app-usb-printer
-svn co https://github.com/coolsnowwolf/luci/trunk/applications/luci-app-zerotier ./luci-app-zerotier
-svn co https://github.com/coolsnowwolf/luci/trunk/applications/luci-app-turboacc ./luci-app-turboacc
-svn co https://github.com/coolsnowwolf/luci/trunk/applications/luci-app-socat ./luci-app-socat
-svn co https://github.com/coolsnowwolf/luci/trunk/applications/luci-app-openvpn-server ./luci-app-openvpn-server
+svn co https://github.com/kiddin9/openwrt-packages/trunk/uci-app-diskman ./luci-app-diskman
+svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-vsftpd ./luci-app-vsftpd
+svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-usb-printer ./luci-app-usb-printer
+svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-zerotier ./luci-app-zerotier
+svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-turboacc ./luci-app-turboacc
+svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-socat ./luci-app-socat
+svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-openvpn-server ./luci-app-openvpn-server
 
 rm -rf ./*/.git & rm -f ./*/.gitattributes
 rm -rf ./*/.svn & rm -rf ./*/.github & rm -rf ./*/.gitignore
