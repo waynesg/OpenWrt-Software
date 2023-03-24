@@ -229,13 +229,17 @@ svn co https://github.com/ximiTech/luci-app-msd_lite/trunk ./luci-app-msd_lite
 svn co https://github.com/ximiTech/msd_lite/trunk ./luci-app-dependence/msd_lite
 
 #Lean
-svn co https://github.com/kiddin9/openwrt-packages/trunk/uci-app-diskman ./luci-app-diskman
+svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-diskman ./luci-app-diskman
 svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-vsftpd ./luci-app-vsftpd
 svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-usb-printer ./luci-app-usb-printer
 svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-zerotier ./luci-app-zerotier
-#svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-turboacc ./luci-app-turboacc
+svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-turboacc ./luci-app-turboacc
+svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/shortcut-fe ./luci-app-dependence/shortcut-fe
 svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-socat ./luci-app-socat
 svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-openvpn-server ./luci-app-openvpn-server
+svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-wrtbwmon ./luci-app-wrtbwmon
+svn co https://github.com/kiddin9/openwrt-packages/trunk/wrtbwmon ./luci-app-wrtbwmon/wrtbwmon
+svn co
 
 rm -rf ./*/.git & rm -f ./*/.gitattributes
 rm -rf ./*/.svn & rm -rf ./*/.github & rm -rf ./*/.gitignore
