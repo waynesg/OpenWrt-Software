@@ -48,8 +48,8 @@ svn co https://github.com/sirpdboy/luci-app-autotimeset/trunk ./luci-app-autotim
 #poweroff 
 svn co https://github.com/esirplayground/luci-app-poweroff/trunk ./luci-app-poweroff
 #netdata
-svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-netdata ./luci-app-netdata
-svn co https://github.com/sirpdboy/sirpdboy-package/trunk/netdata ./luci-app-netdata/netdata
+svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-netdata ./luci-app-netdata
+svn co https://github.com/kiddin9/openwrt-packages/trunk/netdata ./luci-app-netdata/netdata
 #OAF
 svn co https://github.com/destan19/OpenAppFilter/trunk ./luci-app-oaf
 #OpenClash
@@ -104,6 +104,9 @@ svn co https://github.com/xiaorouji/openwrt-passwall/trunk ./luci-app-dependence
 #node-request
 svn co https://github.com/jerrykuku/node-request/trunk ./luci-app-dependence/node-request
 svn co https://github.com/coolsnowwolf/packages/trunk/net/kcptun ./luci-app-dependence/kcptun
+svn co https://github.com/kiddin9/openwrt-packages/trunk/vsftpd-alt ./luci-app-dependence/vsftpd-alt
+svn co https://github.com/kiddin9/openwrt-packages/trunk/dnsforwarder ./luci-app-dependence/dnsforwarder
+
 #lua-neturl
 svn co https://github.com/fw876/helloworld/trunk/lua-neturl ./luci-app-dependence/lua-neturl
 svn co https://github.com/fw876/helloworld/trunk/redsocks2 ./luci-app-dependence/redsock2
@@ -230,7 +233,7 @@ svn co https://github.com/kiddin9/openwrt-packages/trunk/uci-app-diskman ./luci-
 svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-vsftpd ./luci-app-vsftpd
 svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-usb-printer ./luci-app-usb-printer
 svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-zerotier ./luci-app-zerotier
-svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-turboacc ./luci-app-turboacc
+#svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-turboacc ./luci-app-turboacc
 svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-socat ./luci-app-socat
 svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-openvpn-server ./luci-app-openvpn-server
 
