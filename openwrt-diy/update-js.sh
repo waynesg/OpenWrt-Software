@@ -210,9 +210,6 @@ svn co https://github.com/jjm2473/openwrt-apps/trunk/homebox ./luci-app-homebox/
 svn co https://github.com/sbwml/luci-app-alist/trunk ./luci-app-alist
 #mv ./luci-app-alist/luci-app-alist/po/zh_Hans ./luci-app-alist/luci-app-alist/po/zh-cn
 
-#telegrambot
-#svn co https://github.com/alexwbaule/telegramopenwrt/trunk ./telegramopenwrt
-
 # autocore
 # svn co https://github.com/sirpdboy/myautocore/trunk/myautocore ./openwrt-diy/autocore
 
@@ -226,15 +223,6 @@ svn co https://github.com/sirpdboy/luci-app-parentcontrol/trunk ./luci-app-paren
 svn co https://github.com/ximiTech/luci-app-msd_lite/trunk ./luci-app-msd_lite
 svn co https://github.com/ximiTech/msd_lite/trunk ./luci-app-dependence/msd_lite
 
-#quickstart
-#svn co https://github.com/linkease/nas-packages-luci/trunk/luci/luci-app-quickstart ./luci-app-quickstart
-#svn co https://github.com/linkease/nas-packages/trunk/network/services/quickstart ./luci-app-quickstart/quickstart
-#svn co https://github.com/linkease/istore/trunk/luci/luci-app-store ./luci-app-store
-#svn co https://github.com/linkease/istore/trunk/luci/luci-lib-taskd ./luci-app-store/luci-lib-taskd
-#svn co https://github.com/linkease/istore/trunk/luci/luci-lib-xterm ./luci-app-store/luci-lib-xterm
-#svn co https://github.com/linkease/istore/trunk/luci/taskd ./luci-app-store/taskd
-#svn co https://github.com/xiangfeidexiaohuo/op-ipkg/trunk/luci-lib-ipkg ./luci-app-store/luci-lib-ipkg
-
 #Lean
 svn co https://github.com/coolsnowwolf/luci/trunk/applications/luci-app-diskman ./luci-app-diskman
 svn co https://github.com/coolsnowwolf/luci/trunk/applications/luci-app-vsftpd ./luci-app-vsftpd
@@ -242,6 +230,7 @@ svn co https://github.com/coolsnowwolf/luci/trunk/applications/luci-app-usb-prin
 svn co https://github.com/coolsnowwolf/luci/trunk/applications/luci-app-zerotier ./luci-app-zerotier
 svn co https://github.com/coolsnowwolf/luci/trunk/applications/luci-app-turboacc ./luci-app-turboacc
 svn co https://github.com/coolsnowwolf/luci/trunk/applications/luci-app-socat ./luci-app-socat
+svn co https://github.com/coolsnowwolf/luci/trunk/applications/luci-app-openvpn-server ./luci-app-openvpn-server
 
 rm -rf ./*/.git & rm -f ./*/.gitattributes
 rm -rf ./*/.svn & rm -rf ./*/.github & rm -rf ./*/.gitignore
