@@ -8,7 +8,7 @@ rm -rf $1
 
 # argon-theme-config
 svn co https://github.com/jerrykuku/luci-app-argon-config/trunk ./luci-app-argon-config
-svn co https://github.com/gngpp/luci-app-design-config/trunk ./luci-app-design-config
+#svn co https://github.com/gngpp/luci-app-design-config/trunk ./luci-app-design-config
 
 # theme
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon ./luci-theme-argon
@@ -17,7 +17,7 @@ svn co https://github.com/sirpdboy/luci-theme-opentopd/trunk ./luci-theme-opento
 svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-theme-atmaterial
 svn co https://github.com/rosywrt/luci-theme-rosy/trunk/luci-theme-rosy
 svn co https://github.com/kiddin9/luci-theme-edge/branches/18.06 ./luci-theme-edge
-git clone -b main https://github.com/gngpp/luci-theme-design ./luci-theme-design
+#git clone -b main https://github.com/gngpp/luci-theme-design ./luci-theme-design
 
 # apps
 
