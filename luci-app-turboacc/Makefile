@@ -6,7 +6,7 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=luci-app-turboacc
-PKG_RELEASE:=$(COMMITCOUNT)
+PKG_FLAGS:=nonshared
 
 PKG_LICENSE:=GPL-3.0-only
 PKG_MAINTAINER:=Lean <coolsnowwolf@gmail.com>
@@ -70,6 +70,6 @@ config PACKAGE_$(PKG_NAME)_INCLUDE_DNSPROXY
 	default n
 endef
 
-include ../../luci.mk
+include $(TOPDIR)/feeds/luci/luci.mk
 
 # call BuildPackage - OpenWrt buildroot signature
