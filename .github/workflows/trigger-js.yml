@@ -2,15 +2,14 @@
 name: Trigger Update JS
 
 on:
+  workflow_dispatch:
   push:
     paths:
       - '.github\workflows\autoupdate-js.yml'
       - '~/openwrt-diy/update-js.sh'
-  watch:
-    types: started
-  # schedule:
-  #   - cron: 0 20 * * *
-  repository_dispatch:
+#  watch:
+#    types: started
+#  repository_dispatch:
 
 env:
   TZ: Asia/Shanghai
