@@ -239,7 +239,9 @@ svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-socat ./luci-a
 svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-openvpn-server ./luci-app-openvpn-server
 svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-wrtbwmon ./luci-app-wrtbwmon
 svn co https://github.com/kiddin9/openwrt-packages/trunk/wrtbwmon ./luci-app-wrtbwmon/wrtbwmon
-svn co
+svn co https://github.com/QiuSimons/OpenWrt-Add/trunk/luci-app-airconnect ./luci-app-airconnect
+svn co https://github.com/QiuSimons/OpenWrt-Add/trunk/airconnect ./luci-app-airconnect/airconnect
+svn co https://github.com/QiuSimons/OpenWrt-Add/tree/trunk/luci-app-irqbalance ./luci-app-irqbalance
 
 rm -rf ./*/.git & rm -f ./*/.gitattributes
 rm -rf ./*/.svn & rm -rf ./*/.github & rm -rf ./*/.gitignore
