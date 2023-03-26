@@ -129,7 +129,7 @@ svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-cloudflarespee
 svn co https://github.com/immortalwrt-collections/openwrt-cdnspeedtest/trunk/cdnspeedtest ./luci-app-cloudflarespeedtest/cdnspeedtest
 
 #Speedtest
-#svn co https://github.com/sirpdboy/netspeedtest/trunk ./luci-app-netspeedtest
+svn co https://github.com/sirpdboy/netspeedtest/trunk ./luci-app-netspeedtest
 
 #Pandownload-fake-server
 #svn co https://github.com/kiddin9/openwrt-packages/trunk/pandownload-fake-server
@@ -208,8 +208,8 @@ svn co https://github.com/fjqingyou/luci-app-whistle/trunk ./luci-app-whistle
 #homebox
 #svn co https://github.com/jjm2473/openwrt-apps/trunk/luci-app-homebox ./luci-app-homebox
 #svn co https://github.com/jjm2473/openwrt-apps/trunk/homebox ./luci-app-homebox/homebox
-svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-homebox ./luci-app-homebox
-svn co https://github.com/kiddin9/openwrt-packages/trunk/homebox ./luci-app-homebox/homebox
+#svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-homebox ./luci-app-homebox
+#svn co https://github.com/kiddin9/openwrt-packages/trunk/homebox ./luci-app-homebox/homebox
 
 #Alist
 svn co https://github.com/sbwml/luci-app-alist/trunk ./luci-app-alist
