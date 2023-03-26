@@ -242,7 +242,7 @@ svn co https://github.com/kiddin9/openwrt-packages/trunk/wrtbwmon ./luci-app-wrt
 svn co https://github.com/QiuSimons/OpenWrt-Add/trunk/luci-app-airconnect ./luci-app-airconnect
 svn co https://github.com/QiuSimons/OpenWrt-Add/trunk/airconnect ./luci-app-airconnect/airconnect
 svn co https://github.com/QiuSimons/OpenWrt-Add/trunk/luci-app-irqbalance ./luci-app-irqbalance
-svn co https://github.com/coolsnowwolf/luci/trunk/applications/luci-app-cpufreq ./luci-app-cpufreq
+svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-cpufreq ./luci-app-cpufreq
 
 rm -rf ./*/.git & rm -f ./*/.gitattributes
 rm -rf ./*/.svn & rm -rf ./*/.github & rm -rf ./*/.gitignore
