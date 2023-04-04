@@ -100,79 +100,148 @@ if current_node and current_node ~= "" and current_node ~= "nil" then
 end
 tcp_node:value("nil", translate("Close"))
 
+---- UDP Node
+udp_node = s:taboption("Main", ListValue, "udp_node", "<a style='color: red'>" .. translate("UDP Node") .. "</a>")
+udp_node:value("nil", translate("Close"))
+udp_node:value("tcp", translate("Same as the tcp node"))
+
 -- 分流
 if (has_v2ray or has_xray) and #nodes_table > 0 then
 	local normal_list = {}
+	local balancing_list = {}
 	local shunt_list = {}
 	for k, v in pairs(nodes_table) do
 		if v.node_type == "normal" then
 			normal_list[#normal_list + 1] = v
 		end
+		if v.protocol and v.protocol == "_balancing" then
+			balancing_list[#balancing_list + 1] = v
+		end
 		if v.protocol and v.protocol == "_shunt" then
 			shunt_list[#shunt_list + 1] = v
 		end
 	end
-	for k, v in pairs(shunt_list) do
-		uci:foreach(appname, "shunt_rules", function(e)
-			local id = e[".name"]
-			if id and e.remarks then
-				o = s:taboption("Main", ListValue, v.id .. "." .. id .. "_node", string.format('* <a href="%s" target="_blank">%s</a>', api.url("shunt_rules", id), e.remarks))
-				o:depends("tcp_node", v.id)
-				o:value("nil", translate("Close"))
-				o:value("_default", translate("Default"))
-				o:value("_direct", translate("Direct Connection"))
-				o:value("_blackhole", translate("Blackhole"))
-				for k1, v1 in pairs(normal_list) do
-					o:value(v1.id, v1["remark"])
-				end
-				o.cfgvalue = function(self, section)
-					return m:get(v.id, id) or "nil"
-				end
-				o.write = function(self, section, value)
-					m:set(v.id, id, value)
+
+	local function get_cfgvalue(shunt_node_id, rule_id)
+		return function(self, section)
+			return m:get(shunt_node_id, rule_id) or "nil"
+		end
+	end
+	local function get_write(shunt_node_id, rule_id)
+		return function(self, section, value)
+			m:set(shunt_node_id, rule_id, value)
+		end
+	end
+
+	if #normal_list > 0 then
+		for k, v in pairs(shunt_list) do
+			local vid = v.id:sub(1, 8)
+			-- shunt node type, V2ray or Xray
+			local type = s:taboption("Main", ListValue, vid .. "-type", translate("Type"))
+			if has_v2ray then
+				type:value("V2ray", translate("V2ray"))
+			end
+			if has_xray then
+				type:value("Xray", translate("Xray"))
+			end
+			type.cfgvalue = get_cfgvalue(v.id, "type")
+			type.write = get_write(v.id, "type")
+			-- pre-proxy node
+			o = s:taboption("Main", ListValue, vid .. "-main_node", string.format('<a style="color:red">%s</a>', translate("Preproxy Node")), translate("Set the node to be used as a pre-proxy. Each rule (including <code>Default</code>) has a separate switch that controls whether this rule uses the pre-proxy or not."))
+			o:depends("tcp_node", v.id)
+			o:value("nil", translate("Close"))
+			for k1, v1 in pairs(normal_list) do
+				o:value(v1.id, v1.remark)
+			end
+			o.cfgvalue = get_cfgvalue(v.id, "main_node")
+			o.write = get_write(v.id, "main_node")
+			-- Xray dialerProxy
+			local dialerProxy = s:taboption("Main", Flag, vid .. "-dialerProxy", translate("dialerProxy"))
+			dialerProxy.default = "0"
+			dialerProxy:depends(vid .. "-type", "Xray")
+			if (has_v2ray and has_xray) or (v.type == "V2ray" and not has_v2ray) or (v.type == "Xray" and not has_xray) then
+				type:depends("tcp_node", v.id)
+			else
+				type:depends("tcp_node", "hide") --不存在的依赖，即始终隐藏
+				if v.type == "Xray" then
+					dialerProxy:depends("tcp_node", v.id)
 				end
 			end
-		end)
+			dialerProxy.cfgvalue = get_cfgvalue(v.id, "dialerProxy")
+			dialerProxy.write = get_write(v.id, "dialerProxy")
+			dialerProxy.rmempty = false
 
-		local id = "default_node"
-		o = s:taboption("Main", ListValue, v.id .. "." .. id, string.format('* <a style="color:red">%s</a>', translate("Default")))
-		o:depends("tcp_node", v.id)
-		o:value("_direct", translate("Direct Connection"))
-		o:value("_blackhole", translate("Blackhole"))
-		for k1, v1 in pairs(normal_list) do
-			o:value(v1.id, v1["remark"])
-		end
-		o.cfgvalue = function(self, section)
-			return m:get(v.id, id) or "nil"
-		end
-		o.write = function(self, section, value)
-			m:set(v.id, id, value)
-		end
+			uci:foreach(appname, "shunt_rules", function(e)
+				local id = e[".name"]
+				local node_option = vid .. "-" .. id .. "_node"
+				if id and e.remarks then
+					o = s:taboption("Main", ListValue, node_option, string.format('* <a href="%s" target="_blank">%s</a>', api.url("shunt_rules", id), e.remarks))
+					o:depends("tcp_node", v.id)
+					o:value("nil", translate("Close"))
+					o:value("_default", translate("Default"))
+					o:value("_direct", translate("Direct Connection"))
+					o:value("_blackhole", translate("Blackhole"))
+					local pt = s:taboption("Main", ListValue, vid .. "-".. id .. "_proxy_tag", string.format('* <a style="color:red">%s</a>', e.remarks .. " " .. translate("Preproxy")))
+					pt:value("nil", translate("Close"))
+					pt:value("main", translate("Preproxy Node"))
+					pt.default = "nil"
+					for k1, v1 in pairs(balancing_list) do
+						o:value(v1.id, v1.remark)
+					end
+					for k1, v1 in pairs(normal_list) do
+						o:value(v1.id, v1.remark)
+						pt:depends(node_option, v1.id)
+					end
+					o.cfgvalue = get_cfgvalue(v.id, id)
+					o.write = get_write(v.id, id)
+					pt.cfgvalue = get_cfgvalue(v.id, id .. "_proxy_tag")
+					pt.write = get_write(v.id, id .. "_proxy_tag")
+				end
+			end)
 
-		local id = "main_node"
-		o = s:taboption("Main", ListValue, v.id .. "." .. id, string.format('* <a style="color:red">%s</a>', translate("Default Preproxy")), translate("When using, localhost will connect this node first and then use this node to connect the default node."))
-		o:depends("tcp_node", v.id)
-		o:value("nil", translate("Close"))
-		for k1, v1 in pairs(normal_list) do
-			o:value(v1.id, v1["remark"])
+			local id = "default_node"
+			o = s:taboption("Main", ListValue, vid .. "-" .. id, string.format('* <a style="color:red">%s</a>', translate("Default")))
+			o:depends("tcp_node", v.id)
+			o:value("_direct", translate("Direct Connection"))
+			o:value("_blackhole", translate("Blackhole"))
+			for k1, v1 in pairs(normal_list) do
+				o:value(v1.id, v1["remark"])
+			end
+			o.cfgvalue = get_cfgvalue(v.id, id)
+			o.write = get_write(v.id, id)
+
+			local id = "default_proxy_tag"
+			o = s:taboption("Main", ListValue, vid .. "-" .. id, string.format('* <a style="color:red">%s</a>', translate("Default Preproxy")), translate("When using, localhost will connect this node first and then use this node to connect the default node."))
+			for k1, v1 in pairs(normal_list) do
+				if v1.protocol ~= "_balancing" then
+					o:depends(vid .. "-default_node", v1.id)
+				end
+			end
+			o:value("nil", translate("Close"))
+			o:value("main", translate("Preproxy Node"))
+			o.cfgvalue = get_cfgvalue(v.id, id)
+			o.write = get_write(v.id, id)
 		end
-		o.cfgvalue = function(self, section)
-			return m:get(v.id, id) or "nil"
+	else
+		local tips = s:taboption("Main", DummyValue, "tips", " ")
+		tips.rawhtml = true
+		tips.cfgvalue = function(t, n)
+			return string.format('<a style="color: red">%s</a>', translate("There are no available nodes, please add or subscribe nodes first."))
 		end
-		o.write = function(self, section, value)
-			m:set(v.id, id, value)
+		tips:depends({ tcp_node = "nil", ["!reverse"] = true })
+		for k, v in pairs(shunt_list) do
+			tips:depends("udp_node", v.id)
+		end
+		for k, v in pairs(balancing_list) do
+			tips:depends("udp_node", v.id)
 		end
 	end
 end
 
-udp_node = s:taboption("Main", ListValue, "udp_node", "<a style='color: red'>" .. translate("UDP Node") .. "</a>")
-udp_node:value("nil", translate("Close"))
-udp_node:value("tcp", translate("Same as the tcp node"))
-
 tcp_node_socks_port = s:taboption("Main", Value, "tcp_node_socks_port", translate("TCP Node") .. " Socks " .. translate("Listen Port"))
 tcp_node_socks_port.default = 1070
 tcp_node_socks_port.datatype = "port"
-
+tcp_node_socks_port:depends({ tcp_node = "nil", ["!reverse"] = true })
 --[[
 if has_v2ray or has_xray then
 	tcp_node_http_port = s:taboption("Main", Value, "tcp_node_http_port", translate("TCP Node") .. " HTTP " .. translate("Listen Port") .. " " .. translate("0 is not use"))
@@ -330,6 +399,16 @@ o:depends({dns_mode = "xray", v2ray_dns_mode = "tcp"})
 o:depends({dns_mode = "xray", v2ray_dns_mode = "doh"})
 o.rmempty = false
 
+if api.is_finded("chinadns-ng") then
+	o = s:taboption("DNS", Flag, "chinadns_ng", translate("ChinaDNS-NG"), translate("The effect is better, but will increase the memory."))
+	o.default = "0"
+	o:depends({dns_mode = "dns2socks"})
+	o:depends({dns_mode = "dns2tcp"})
+	o:depends({dns_mode = "xray", v2ray_dns_mode = "tcp"})
+	o:depends({dns_mode = "xray", v2ray_dns_mode = "doh"})
+	o:depends({dns_mode = "udp"})
+end
+
 if has_chnlist then
 	when_chnroute_default_dns = s:taboption("DNS", ListValue, "when_chnroute_default_dns", translate("When using the chnroute list the default DNS"))
 	when_chnroute_default_dns.default = "direct"
@@ -338,14 +417,12 @@ if has_chnlist then
 	when_chnroute_default_dns.description = "<ul>"
 	.. "<li>" .. translate("Remote DNS can avoid more DNS leaks, but some domestic domain names maybe to proxy!") .. "</li>"
 	.. "<li>" .. translate("Direct DNS Internet experience may be better, but DNS will be leaked!") .. "</li>"
-	if api.is_finded("chinadns-ng") then
-		when_chnroute_default_dns:value("chinadns_ng", translate("ChinaDNS-NG"))
-		when_chnroute_default_dns.default = "chinadns_ng"
-	end
-	when_chnroute_default_dns.description = when_chnroute_default_dns.description .. "</li></ul>"
+	.. "</ul>"
+	local _depends = {}
 	if api.is_finded("smartdns") then
-		when_chnroute_default_dns:depends("dns_shunt", "dnsmasq")
+		_depends["dns_shunt"] = "dnsmasq"
 	end
+	when_chnroute_default_dns:depends(_depends)
 end
 
 o = s:taboption("DNS", Button, "clear_ipset", translate("Clear IPSET"), translate("Try this feature if the rule modification does not take effect."))
@@ -438,6 +515,16 @@ trojan_loglevel:value("1", "info")
 trojan_loglevel:value("2", "warn")
 trojan_loglevel:value("3", "error")
 trojan_loglevel:value("4", "fatal")
+
+o = s:taboption("log", Flag, "advanced_log_feature", translate("Advanced log feature"), translate("For professionals only."))
+o.default = "0"
+o.rmempty = false
+local syslog = s:taboption("log", Flag, "sys_log", translate("Logging to system log"), translate("Logging to the system log for more advanced functions. For example, send logs to a dedicated log server."))
+syslog:depends("advanced_log_feature", "1")
+syslog.default = "0"
+syslog.rmempty = false
+local logpath = s:taboption("log", Value, "persist_log_path", translate("Persist log file directory"), translate("The path to the directory used to store persist log files, the \"/\" at the end can be omitted. Leave it blank to disable this feature."))
+logpath:depends({ ["advanced_log_feature"] = 1, ["sys_log"] = 0 })
 
 s:tab("faq", "FAQ")
 
