@@ -8,18 +8,16 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=luabitop
-PKG_VERSION:=1.0.2
+PKG_VERSION:=1.0.3
 PKG_RELEASE:=1
 
-_BASENAME:=LuaBitOp
+_BASENAME:=luabitop
 
 PKG_MAINTAINER:=Maxim Storchak <m.storchak@gmail.com>
-PKG_SOURCE_VERSION:=$(PKG_VERSION)-support-lua5-3+
-PKG_SOURCE:=$(_BASENAME)-$(PKG_SOURCE_VERSION).tar.gz
-PKG_SOURCE_URL:=http://bitop.luajit.org/download/
-PKG_HASH:=1207c9293dcd52eb9dca6538d1b87352bd510f4e760938f5048433f7f272ce99
+PKG_SOURCE:=$(_BASENAME)-$(PKG_VERSION).tar.gz
+PKG_SOURCE_URL:=https://github.com/waynesg/lua-bit-op-5.3-fork/releases/download/luabitop-1.0.3/
+PKG_HASH:=d401b7e717ddb17596768e8d7e502c55530d0552ef244ba4bd68ef5c5fcba727
 PKG_BUILD_DIR:=$(BUILD_DIR)/$(_BASENAME)-$(PKG_VERSION)
-PKG_SOURCE_PATCHFILES:=LuaBitOp-1.0.2-support-lua5-3+.patch
 PKG_LICENSE:=MIT
 
 include $(INCLUDE_DIR)/package.mk
@@ -29,21 +27,17 @@ define Package/luabitop
   SECTION:=lang
   CATEGORY:=Languages
   TITLE:=luabitop
-  URL:=http://bitop.luajit.org/
+  URL:=https://github.com/waynesg/lua-bit-op-5.3-fork
   DEPENDS:=+liblua
 endef
 
 define Package/luabitop/description
-Lua BitOp is a C extension module for Lua 5.1/5.2 which adds bitwise operations on numbers.
-endef
-
-define Package/luabitop/prepare
-$(call Build/Prepare/Default)
-$(foreach patch,$(PKG_SOURCE_PATCHFILES),$(call PatchFile,$(PKG_BUILD_DIR)/$(patsubst %.patch,%,$(notdir $(patch))),$(CURDIR)/$(patsubst https://cloud.github.com/downloads/davidm/lua-bit-numberlua,https://raw.githubusercontent.com/davidm/lua-bit-numberlua/master,$(strip $(filter %.patch,$(PKG_SOURCE_URL)))) && touch $(PKG_BUILD_DIR)/.prepared_$(basename $(notdir $(patch)))))
+Lua BitOp is a C extension module for Lua 5.1/5.2/5.3 which adds bitwise operations on numbers.
 endef
 
 define Build/Configure
 endef
+
 
 TARGET_CFLAGS += $(FPIC) -DLUA_USE_LINUX -DLUA_NUMBER_DOUBLE
 
