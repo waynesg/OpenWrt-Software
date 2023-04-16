@@ -1,23 +1,14 @@
-#
-# Copyright (C) 2014 OpenWrt.org
-#
-# This is free software, licensed under the GNU General Public License v2.
-# See /LICENSE for more information.
-#
-
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=luabitop
 PKG_VERSION:=1.0.3
 PKG_RELEASE:=1
 
-_BASENAME:=luabitop
+PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
+PKG_SOURCE_URL:=https://github.com/waynesg/lua-bit-op-5.3-fork/archive/refs/tags/$(PKG_VERSION).tar.gz
+PKG_HASH:=f16d8d2fb9c718e28a2cf052b660aa7b77e969bf27f816b0bb95d408c8de31ac
 
-PKG_MAINTAINER:=Maxim Storchak <m.storchak@gmail.com>
-PKG_SOURCE:=$(_BASENAME)-$(PKG_VERSION).tar.gz
-PKG_SOURCE_URL:=https://github.com/waynesg/lua-bit-op-5.3-fork/releases/download/luabitop-1.0.3/
-PKG_HASH:=d401b7e717ddb17596768e8d7e502c55530d0552ef244ba4bd68ef5c5fcba727
-PKG_BUILD_DIR:=$(BUILD_DIR)/$(_BASENAME)-$(PKG_VERSION)
+PKG_MAINTAINER:=Your Name <youremail@example.com>
 PKG_LICENSE:=MIT
 
 include $(INCLUDE_DIR)/package.mk
@@ -32,17 +23,20 @@ define Package/luabitop
 endef
 
 define Package/luabitop/description
-Lua BitOp is a C extension module for Lua 5.1/5.2/5.3 which adds bitwise operations on numbers.
+ Lua BitOp is a C extension module for Lua 5.3 which adds bitwise operations on numbers.
 endef
+
+TARGET_CFLAGS += $(FPIC) -DLUA_USE_LINUX -DLUA_NUMBER_DOUBLE
+
+ifeq ($(findstring $(LINUX_VERSION),2.6 3.10),)
+    TARGET_LDFLAGS += -Wl,-E
+endif
 
 define Build/Configure
 endef
 
-
-TARGET_CFLAGS += $(FPIC) -DLUA_USE_LINUX -DLUA_NUMBER_DOUBLE
-
 define Build/Compile
-	$(TARGET_CC) $(TARGET_CFLAGS) $(TARGET_CPPFLAGS) $(TARGET_CPPFLAGS) -std=gnu99 $(FPIC) -DLUA_USE_LINUX -shared -o $(PKG_BUILD_DIR)/bit.so $(PKG_BUILD_DIR)/bit.c
+	$(TARGET_CC) $(TARGET_CFLAGS) $(TARGET_CPPFLAGS) $(TARGET_CPPFLAGS) -std=gnu99 $(FPIC) -DLUA_USE_LINUX -shared -o $(PKG_BUILD_DIR)/bit.so $(PKG_BUILD_DIR)/src/bit.c
 endef
 
 define Package/luabitop/install
