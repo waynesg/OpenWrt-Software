@@ -6,9 +6,8 @@ PKG_RELEASE:=1
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
 PKG_SOURCE_URL:=https://github.com/waynesg/lua-bit-op-5.3-fork/archive/refs/tags/$(PKG_VERSION).tar.gz
-PKG_HASH:=f16d8d2fb9c718e28a2cf052b660aa7b77e969bf27f816b0bb95d408c8de31ac
-
-PKG_MAINTAINER:=Your Name <youremail@example.com>
+PKG_HASH:=d401b7e717ddb17596768e8d7e502c55530d0552ef244ba4bd68ef5c5fcba727
+PKG_MAINTAINER:=waynesg <waynesg511@gmail.com
 PKG_LICENSE:=MIT
 
 include $(INCLUDE_DIR)/package.mk
