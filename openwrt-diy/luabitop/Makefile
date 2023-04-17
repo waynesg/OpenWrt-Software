@@ -4,12 +4,15 @@ PKG_NAME:=luabitop
 PKG_VERSION:=1.0.3
 PKG_RELEASE:=1
 
-PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
-PKG_SOURCE_URL:=https://github.com/waynesg/lua-bit-op-5.3-fork/archive/refs/tags/
-PKG_HASH:=d401b7e717ddb17596768e8d7e502c55530d0552ef244ba4bd68ef5c5fcba727
-PKG_BUILD_DIR:=$(BUILD_DIR)/$(PKG_NAME)-$(PKG_VERSION)
-PKG_MAINTAINER:=waynesg <waynesg511@gmail.com>
+_BASENAME:=LuaBitOp
+
+
+PKG_MAINTAINER:=waynesg
+PKG_SOURCE:=$(_BASENAME)-$(PKG_VERSION).tar.gz
+PKG_SOURCE_URL:=https://github.com/waynesg/lua-bit-op-5.3-fork
+PKG_BUILD_DIR:=$(BUILD_DIR)/$(_BASENAME)-$(PKG_VERSION)
 PKG_LICENSE:=MIT
+
 
 include $(INCLUDE_DIR)/package.mk
 
