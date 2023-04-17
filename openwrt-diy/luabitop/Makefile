@@ -9,7 +9,8 @@ _BASENAME:=LuaBitOp
 
 PKG_MAINTAINER:=waynesg
 PKG_SOURCE:=$(_BASENAME)-$(PKG_VERSION).tar.gz
-PKG_SOURCE_URL:=https://github.com/waynesg/lua-bit-op-5.3-fork
+PKG_SOURCE_URL:=https://github.com/waynesg/lua-bit-op-5.3-fork/releases/download/1.0.3/
+PKG_HASH:=e9b47da4d8ac32ed52a81e31950a49895a858e31eaf6aa110bc81f6b0e6dece9
 PKG_BUILD_DIR:=$(BUILD_DIR)/$(_BASENAME)-$(PKG_VERSION)
 PKG_LICENSE:=MIT
 
@@ -29,17 +30,14 @@ define Package/luabitop/description
  Lua BitOp is a C extension module for Lua 5.3 which adds bitwise operations on numbers.
 endef
 
-TARGET_CFLAGS += $(FPIC) -DLUA_USE_LINUX -DLUA_NUMBER_DOUBLE
-
-ifeq ($(findstring $(LINUX_VERSION),2.6 3.10),)
-    TARGET_LDFLAGS += -Wl,-E
-endif
-
 define Build/Configure
 endef
 
+
+TARGET_CFLAGS += $(FPIC) -DLUA_USE_LINUX -DLUA_NUMBER_DOUBLE
+
 define Build/Compile
-	$(TARGET_CC) $(TARGET_CFLAGS) $(TARGET_CPPFLAGS) $(TARGET_CPPFLAGS) -std=gnu99 $(FPIC) -DLUA_USE_LINUX -shared -o $(PKG_BUILD_DIR)/bit.so $(PKG_BUILD_DIR)/src/bit.c
+	$(TARGET_CC) $(TARGET_CFLAGS) $(TARGET_CPPFLAGS) $(TARGET_CPPFLAGS) -std=gnu99 $(FPIC) -DLUA_USE_LINUX -shared -o $(PKG_BUILD_DIR)/bit.so $(PKG_BUILD_DIR)/bit.c
 endef
 
 define Package/luabitop/install
