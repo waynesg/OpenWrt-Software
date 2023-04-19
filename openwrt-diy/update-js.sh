@@ -198,7 +198,7 @@ svn co https://github.com/doushang/luci-app-shortcutmenu/trunk/luci-app-shortcut
 svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-packet-capture ./luci-app-packet-capture
 
 #tn-netports
-#git clone --depth 1 https://github.com/waynesg/luci-app-tn-netports.git ./luci-app-tn-netports
+git clone --depth 1 https://github.com/waynesg/luci-app-tn-netports.git ./luci-app-tn-netports
 git clone -b master --depth 1 https://github.com/waynesg/luci-app-internet-detector ./luci-app-internet-detector
 
 #whistle
