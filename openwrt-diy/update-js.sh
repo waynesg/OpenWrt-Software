@@ -167,9 +167,9 @@ svn co https://github.com/Erope/openwrt_nezha/trunk/luci-app-nezha ./luci-app-ne
 svn co https://github.com/Erope/openwrt_nezha/trunk/openwrt-nezha ./luci-app-nezha/openwrt-nezha
 
 #Smartdns
-#git clone -b master https://github.com/pymumu/luci-app-smartdns ./luci-app-smartdns
+git clone -b master https://github.com/pymumu/luci-app-smartdns ./luci-app-smartdns
 #svn co https://github.com/pymumu/luci-app-smartdns/branches/lede ./luci-app-smartdns
-#svn co https://github.com/pymumu/openwrt-smartdns/trunk ./luci-app-smartdns/smartdns
+svn co https://github.com/pymumu/openwrt-smartdns/trunk ./luci-app-smartdns/smartdns
 
 #Pikpak
 svn co https://github.com/ykxVK8yL5L/pikpak-webdav/trunk/openwrt ./luci-app-pikpak-webdav
@@ -182,8 +182,6 @@ svn co https://github.com/esirplayground/openwrt-ethr/trunk ./luci-app-ethr
 #svn co https://github.com/tuanqing/openwrt-mentohust/trunk ./openwrt-mentohust
 #svn co https://github.com/tuanqing/luci-app-mentohust/trunk ./luci-app-mentohust
 #svn co https://github.com/msylgj/luci-app-tencentddns/trunk ./luci-app-tencentddns
-#svn co https://github.com/jerrykuku/luci-app-ttnode/trunk ./luci-app-ttnode
-#svn co https://github.com/siropboy/sirpdboy-package/trunk/luci-app-socat
 #svn co https://github.com/tuanqing/install-program/trunk ./install-program
 
 #Wizard
@@ -206,18 +204,8 @@ git clone -b master --depth 1 https://github.com/waynesg/luci-app-internet-detec
 #whistle
 svn co https://github.com/fjqingyou/luci-app-whistle/trunk ./luci-app-whistle
 
-#homebox
-#svn co https://github.com/jjm2473/openwrt-apps/trunk/luci-app-homebox ./luci-app-homebox
-#svn co https://github.com/jjm2473/openwrt-apps/trunk/homebox ./luci-app-homebox/homebox
-#svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-homebox ./luci-app-homebox
-#svn co https://github.com/kiddin9/openwrt-packages/trunk/homebox ./luci-app-homebox/homebox
-
 #Alist
 svn co https://github.com/sbwml/luci-app-alist/trunk ./luci-app-alist
-#mv ./luci-app-alist/luci-app-alist/po/zh_Hans ./luci-app-alist/luci-app-alist/po/zh-cn
-
-# autocore
-# svn co https://github.com/sirpdboy/myautocore/trunk/myautocore ./openwrt-diy/autocore
 
 #accesscontrtrol-plus
 svn co https://github.com/kingyond/luci-app-accesscontrol-plus/trunk/luci-app-accesscontrol-plus ./luci-app-accesscontrol-plus
@@ -230,20 +218,19 @@ svn co https://github.com/ximiTech/luci-app-msd_lite/trunk ./luci-app-msd_lite
 svn co https://github.com/ximiTech/msd_lite/trunk ./luci-app-dependence/msd_lite
 
 #Lean
-#svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-diskman ./luci-app-diskman
-#svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-vsftpd ./luci-app-vsftpd
-#svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-usb-printer ./luci-app-usb-printer
-#svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-zerotier ./luci-app-zerotier
-#svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-turboacc ./luci-app-turboacc
+svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-diskman ./luci-app-diskman
+svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-vsftpd ./luci-app-vsftpd
+svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-usb-printer ./luci-app-usb-printer
+svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-zerotier ./luci-app-zerotier
+svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-turboacc ./luci-app-turboacc
 svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/shortcut-fe ./luci-app-dependence/shortcut-fe
-#svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-socat ./luci-app-socat
-#svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-openvpn-server ./luci-app-openvpn-server
+svn co https://github.com/Lienol/openwrt-package/trunk/luci-app-socat ./luci-app-socat
+svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-openvpn-server ./luci-app-openvpn-server
 svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-wrtbwmon ./luci-app-wrtbwmon
 svn co https://github.com/kiddin9/openwrt-packages/trunk/wrtbwmon ./luci-app-wrtbwmon/wrtbwmon
 svn co https://github.com/QiuSimons/OpenWrt-Add/trunk/luci-app-airconnect ./luci-app-airconnect
 svn co https://github.com/QiuSimons/OpenWrt-Add/trunk/airconnect ./luci-app-airconnect/airconnect
-#svn co https://github.com/QiuSimons/OpenWrt-Add/trunk/luci-app-irqbalance ./luci-app-irqbalance
-#svn co https://github.com/QiuSimons/OpenWrt-Add/trunk/luci-app-cpufreq ./luci-app-cpufreq
+
 
 rm -rf ./*/.git & rm -f ./*/.gitattributes
 rm -rf ./*/.svn & rm -rf ./*/.github & rm -rf ./*/.gitignore
