@@ -230,6 +230,7 @@ svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-wrtbwmon ./luc
 svn co https://github.com/kiddin9/openwrt-packages/trunk/wrtbwmon ./luci-app-wrtbwmon/wrtbwmon
 svn co https://github.com/QiuSimons/OpenWrt-Add/trunk/luci-app-airconnect ./luci-app-airconnect
 svn co https://github.com/QiuSimons/OpenWrt-Add/trunk/airconnect ./luci-app-airconnect/airconnect
+svn co https://github.com/QiuSimons/OpenWrt-Add/trunk/luci-app-cpufreq ./luci-app-cpufreq
 
 
 rm -rf ./*/.git & rm -f ./*/.gitattributes
