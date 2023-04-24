@@ -7,9 +7,9 @@ on:
     paths:
       - '.github\workflows\autoupdate-js.yml'
       - '~/openwrt-diy/update-js.sh'
-#  watch:
-#    types: started
-#  repository_dispatch:
+  watch:
+    types: started
+  repository_dispatch:
 
 env:
   TZ: Asia/Shanghai
