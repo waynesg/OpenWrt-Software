@@ -25,7 +25,7 @@ msgstr "自动检测"
 msgid "Bridge member"
 msgstr "网桥成员"
 
-#: applications/luci-app-tn-netports/htdocs/luci-static/resources/netports.js:364
+#: applications/luci-app-tn-netports/htdocs/luci-static/resources/netports.js:367
 msgid "Collecting data..."
 msgstr "收集数据中..."
 
@@ -101,7 +101,7 @@ msgstr "网络接口状态"
 msgid "Nick name"
 msgstr "昵称"
 
-#: applications/luci-app-tn-netports/htdocs/luci-static/resources/netports.js:586
+#: applications/luci-app-tn-netports/htdocs/luci-static/resources/netports.js:589
 msgid "No data to display"
 msgstr "无可用数据"
 
@@ -142,11 +142,11 @@ msgid "Toggle additional information"
 msgstr "展开/折叠附加数据"
 
 #: applications/luci-app-tn-netports/htdocs/luci-static/resources/netports.js:323
-#: applications/luci-app-tn-netports/htdocs/luci-static/resources/netports.js:419
+#: applications/luci-app-tn-netports/htdocs/luci-static/resources/netports.js:422
 msgid "Toggle view mode"
 msgstr "切换显示模式"
 
-#: applications/luci-app-tn-netports/htdocs/luci-static/resources/netports.js:410
+#: applications/luci-app-tn-netports/htdocs/luci-static/resources/netports.js:413
 msgid "Too many ports for horizontal display mode"
 msgstr "水平显示模式端口过多"
 
