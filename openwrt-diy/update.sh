@@ -245,6 +245,8 @@ svn co https://github.com/ximiTech/msd_lite/trunk ./luci-app-dependence/msd_lite
 svn co https://github.com/linkease/openwrt-app-actions/trunk/applications/luci-app-airconnect ./luci-app-airconnect
 svn co https://github.com/linkease/openwrt-app-actions/trunk/applications/airconnect ./luci-app-airconnect/airconnect
 
+git clone --depth 1 https://github.com/thinktip/luci-theme-neobird.git ./luci-theme-neobird
+
 rm -rf ./*/.git & rm -f ./*/.gitattributes
 rm -rf ./*/.svn & rm -rf ./*/.github & rm -rf ./*/.gitignore
 rm -rf ./*/*/.svn
