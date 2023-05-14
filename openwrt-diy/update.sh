@@ -246,6 +246,7 @@ svn co https://github.com/linkease/openwrt-app-actions/trunk/applications/luci-a
 svn co https://github.com/linkease/openwrt-app-actions/trunk/applications/airconnect ./luci-app-airconnect/airconnect
 
 git clone --depth 1 https://github.com/thinktip/luci-theme-neobird.git ./luci-theme-neobird
+git clone --depth 1 https://github.com/tindy2013/openwrt-subconverter package/waynesg/luci-app-subconverter
 
 rm -rf ./*/.git & rm -f ./*/.gitattributes
 rm -rf ./*/.svn & rm -rf ./*/.github & rm -rf ./*/.gitignore
