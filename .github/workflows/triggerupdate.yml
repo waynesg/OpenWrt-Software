@@ -2,6 +2,7 @@
 name: Trigger Update
 
 on:
+  workflow_dispatch:
   push:
     paths:
       - '.github\workflows\autoupdate.yml'
