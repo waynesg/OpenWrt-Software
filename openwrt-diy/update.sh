@@ -248,9 +248,9 @@ svn co https://github.com/linkease/openwrt-app-actions/trunk/applications/aircon
 #eqosplus
 svn co https://github.com/sirpdboy/luci-app-eqosplus/trunk ./luci-app-eqosplus
 #xunlei
-svn co https://github.com/sbwml/luci-app-xunlei ./luci-app-xunlei
+svn co https://github.com/sbwml/luci-app-xunlei/trunk ./luci-app-xunlei
 #openai
-svn co https://github.com/sbwml/luci-app-openai ./luci-app-openai
+svn co https://github.com/sbwml/luci-app-openai/trunk ./luci-app-openai
 #wechatpusher
 git clone -b openwrt-18.06 https://github.com/tty228/luci-app-wechatpush ./luci-app-wechatpush
 
