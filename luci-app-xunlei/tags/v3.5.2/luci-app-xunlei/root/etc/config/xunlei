@@ -1,0 +1,6 @@
+
+config xunlei
+	option 'enabled' '0'
+	option 'port' '5051'
+	option 'config_path' '/etc/xunlei'
+	option 'download_dir' '/mnt'
