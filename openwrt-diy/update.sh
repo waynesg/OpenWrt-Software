@@ -245,6 +245,16 @@ svn co https://github.com/ximiTech/msd_lite/trunk ./luci-app-dependence/msd_lite
 svn co https://github.com/linkease/openwrt-app-actions/trunk/applications/luci-app-airconnect ./luci-app-airconnect
 svn co https://github.com/linkease/openwrt-app-actions/trunk/applications/airconnect ./luci-app-airconnect/airconnect
 
+#eqosplus
+svn co https://github.com/sirpdboy/luci-app-eqosplus/trunk ./luci-app-eqosplus
+#xunlei
+svn co https://github.com/sbwml/luci-app-xunlei ./luci-app-xunlei
+#openai
+svn co https://github.com/sbwml/luci-app-openai ./luci-app-openai
+#wechatpusher
+git clone -b openwrt-18.06 https://github.com/tty228/luci-app-wechatpush ./luci-app-wechatpush
+
+
 git clone --depth 1 https://github.com/thinktip/luci-theme-neobird.git ./luci-theme-neobird
 git clone --depth 1 https://github.com/tindy2013/openwrt-subconverter ./luci-app-subconverter
 
