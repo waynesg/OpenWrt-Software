@@ -169,7 +169,7 @@ svn co https://github.com/Erope/openwrt_nezha/trunk/luci-app-nezha ./luci-app-ne
 svn co https://github.com/Erope/openwrt_nezha/trunk/openwrt-nezha ./luci-app-nezha/openwrt-nezha
 
 #Smartdns
-svn co https://github.com/pymumu/luci-app-smartdns/branches/lede ./luci-app-smartdns
+#svn co https://github.com/pymumu/luci-app-smartdns/branches/lede ./luci-app-smartdns
 #svn co https://github.com/pymumu/openwrt-smartdns/trunk ./luci-app-smartdns/smartdns
 
 #Pikpak
