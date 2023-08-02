@@ -7,7 +7,7 @@ rm -rf $1
 #svn co https://github.com/waynesg/github-actions-build-openwrt/trunk/build/Lede_x86_64/files/etc ./settings/etc
 
 # argon-theme-config
-svn co https://github.com/jerrykuku/luci-app-argon-config/trunk ./luci-app-argon-config
+git clone -b 18.06 https://github.com/jerrykuku/luci-app-argon-config ./luci-app-argon-config
 #svn co https://github.com/gngpp/luci-app-design-config/trunk ./luci-app-design-config
 
 # theme
@@ -28,28 +28,28 @@ svn co https://github.com/sbwml/luci-app-mosdns/trunk ./luci-app-mosdns
 svn co https://github.com/jerrykuku/luci-app-vssr/trunk ./luci-app-vssr
 
 #Bypass
-svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-bypass ./luci-app-bypass
+#svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-bypass ./luci-app-bypass
 #svn co https://github.com/kiddin9/openwrt-packages/trunk/tcping ./luci-app-bypass/tcping
-svn co https://github.com/xiangfeidexiaohuo/op-ipkg/trunk ./luci-app-bypass/luci-lib-ipkg
+#svn co https://github.com/xiangfeidexiaohuo/op-ipkg/trunk ./luci-app-bypass/luci-lib-ipkg
 #SSR-PLUS
 svn co https://github.com/fw876/helloworld/trunk/luci-app-ssr-plus
 
 #adblock-plus
 #svn co https://github.com/small-5/luci-app-adblock-plus/branches/18.06 ./luci-app-adblock-plus
 #gowedav
-svn co https://github.com/project-openwrt/openwrt-gowebdav/trunk ./luci-app-gowebdav
-svn co https://github.com/1715173329/gowebdav/trunk ./luci-app-gowebdav/gowebdav
+#svn co https://github.com/project-openwrt/openwrt-gowebdav/trunk ./luci-app-gowebdav
+#svn co https://github.com/1715173329/gowebdav/trunk ./luci-app-gowebdav/gowebdav
 #smartinfo
 svn co https://github.com/iamaluckyguy/luci-app-smartinfo/trunk ./luci-app-smartinfo
 #serverchan
 svn co https://github.com/tty228/luci-app-serverchan/trunk ./luci-app-serverchan
 #autotimeset(自动重启，关机)
-svn co https://github.com/sirpdboy/luci-app-autotimeset/trunk ./luci-app-autotimeset
+#svn co https://github.com/sirpdboy/luci-app-autotimeset/trunk ./luci-app-autotimeset
 #poweroff 
 svn co https://github.com/esirplayground/luci-app-poweroff/trunk ./luci-app-poweroff
 #netdata
-svn co https://github.com/siropboy/sirpdboy-package/trunk/luci-app-netdata ./luci-app-netdata
-svn co https://github.com/siropboy/sirpdboy-package/trunk/netdata ./luci-app-netdata/netdata
+#svn co https://github.com/siropboy/sirpdboy-package/trunk/luci-app-netdata ./luci-app-netdata
+#svn co https://github.com/siropboy/sirpdboy-package/trunk/netdata ./luci-app-netdata/netdata
 #OAF
 svn co https://github.com/destan19/OpenAppFilter/trunk ./luci-app-oaf
 #OpenClash
@@ -57,7 +57,7 @@ svn co https://github.com/vernesong/OpenClash/trunk/luci-app-openclash
 #svn co https://github.com/Lienol/openwrt-packages/trunk/net/https-dns-proxy
 #svn co https://github.com/Lienol/openwrt-packages/trunk/net/haproxy
 #eqos
-svn co https://github.com/littletao08/luci-app-eqos/trunk ./luci-app-eqos
+#svn co https://github.com/littletao08/luci-app-eqos/trunk ./luci-app-eqos
 #wrtbwmon
 #svn co https://github.com/firker/luci-app-wrtbwmon-zh/trunk/luci-app-wrtbwmon-zh
 #svn co https://github.com/firker/luci-app-wrtbwmon-zh/trunk/wrtbwmon
@@ -68,8 +68,8 @@ svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-advanced
 svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-control-speedlimit
 
 #cpulimited
-svn co https://github.com/kiddin9/openwrt-packages/trunk/cpulimit ./luci-app-cpulimit/cpulimit
-svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-cpulimit ./luci-app-cpulimit
+#svn co https://github.com/kiddin9/openwrt-packages/trunk/cpulimit ./luci-app-cpulimit/cpulimit
+#svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-cpulimit ./luci-app-cpulimit
 #filebrowser
 svn co https://github.com/Lienol/openwrt-package/trunk/luci-app-filebrowser
 #fileassistant
@@ -143,8 +143,8 @@ svn co https://github.com/sirpdboy/netspeedtest/trunk ./luci-app-netspeedtest
 svn co https://github.com/zhengwenxiao/luci-app-zospusher/trunk ./luci-app-zospusher
 
 #aliyun webdav
-svn co https://github.com/jerrykuku/luci-app-go-aliyundrive-webdav/trunk ./luci-app-go-aliyundrive-webdav
-svn co https://github.com/jerrykuku/go-aliyundrive-webdav/trunk ./luci-app-go-aliyundrive-webdav/go-aliyundrive-webdav
+#svn co https://github.com/jerrykuku/luci-app-go-aliyundrive-webdav/trunk ./luci-app-go-aliyundrive-webdav
+#svn co https://github.com/jerrykuku/go-aliyundrive-webdav/trunk ./luci-app-go-aliyundrive-webdav/go-aliyundrive-webdav
 
 #webguide
 svn co https://github.com/p1ay8y3ar/luci-app-webguide/trunk/luci-app-webguide ./luci-app-webguide
@@ -156,8 +156,8 @@ svn co https://github.com/Hyy2001X/AutoBuild-Packages/trunk/luci-app-onliner ./l
 svn co https://github.com/sundaqiang/openwrt-packages/trunk/luci-app-supervisord ./luci-app-supervisord
 
 #Adguardhome
-svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-adguardhome ./luci-app-adguardhome
-svn co https://github.com/kiddin9/openwrt-packages/trunk/adguardhome ./luci-app-adguardhome/adguardhome
+#svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-adguardhome ./luci-app-adguardhome
+#svn co https://github.com/kiddin9/openwrt-packages/trunk/adguardhome ./luci-app-adguardhome/adguardhome
 
 #svn co https://github.com/project-openwrt/openwrt-tmate/trunk ./openwrt-tmate
 #svn co https://github.com/koshev-msk/luci-app-modeminfo
@@ -165,20 +165,20 @@ svn co https://github.com/kiddin9/openwrt-packages/trunk/adguardhome ./luci-app-
 #svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-aliddns
 
 #nezha
-svn co https://github.com/Erope/openwrt_nezha/trunk/luci-app-nezha ./luci-app-nezha
-svn co https://github.com/Erope/openwrt_nezha/trunk/openwrt-nezha ./luci-app-nezha/openwrt-nezha
+#svn co https://github.com/Erope/openwrt_nezha/trunk/luci-app-nezha ./luci-app-nezha
+#svn co https://github.com/Erope/openwrt_nezha/trunk/openwrt-nezha ./luci-app-nezha/openwrt-nezha
 
 #Smartdns
 #svn co https://github.com/pymumu/luci-app-smartdns/branches/lede ./luci-app-smartdns
 #svn co https://github.com/pymumu/openwrt-smartdns/trunk ./luci-app-smartdns/smartdns
 
 #Pikpak
-svn co https://github.com/ykxVK8yL5L/pikpak-webdav/trunk/openwrt ./luci-app-pikpak-webdav
+#svn co https://github.com/ykxVK8yL5L/pikpak-webdav/trunk/openwrt ./luci-app-pikpak-webdav
 
-svn co https://github.com/koshev-msk/modemfeed/trunk/luci/applications/luci-app-telegrambot ./luci-app-telegrambot
-svn co https://github.com/koshev-msk/modemfeed/trunk/packages/net/telegrambot ./luci-app-telegrambot/telegrambot
+#svn co https://github.com/koshev-msk/modemfeed/trunk/luci/applications/luci-app-telegrambot ./luci-app-telegrambot
+#svn co https://github.com/koshev-msk/modemfeed/trunk/packages/net/telegrambot ./luci-app-telegrambot/telegrambot
 
-svn co https://github.com/esirplayground/openwrt-ethr/trunk ./luci-app-ethr
+#svn co https://github.com/esirplayground/openwrt-ethr/trunk ./luci-app-ethr
 
 #svn co https://github.com/tuanqing/openwrt-mentohust/trunk ./openwrt-mentohust
 #svn co https://github.com/tuanqing/luci-app-mentohust/trunk ./luci-app-mentohust
@@ -195,10 +195,10 @@ svn co https://github.com/Hyy2001X/AutoBuild-Packages/trunk/webd ./luci-app-webd
 svn co https://github.com/Hyy2001X/AutoBuild-Packages/trunk/luci-app-webd ./luci-app-webd
 
 #shortcut
-svn co https://github.com/doushang/luci-app-shortcutmenu/trunk/luci-app-shortcutmenu ./luci-app-shortcutmenu
+#svn co https://github.com/doushang/luci-app-shortcutmenu/trunk/luci-app-shortcutmenu ./luci-app-shortcutmenu
 
 #tcpdump
-svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-packet-capture ./luci-app-packet-capture
+#svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-packet-capture ./luci-app-packet-capture
 
 #tn-netports
 #git clone -b v1.x https://github.com/tano-systems/luci-app-tn-netports ./luci-app-tn-netports
@@ -213,9 +213,6 @@ svn co https://github.com/jjm2473/openwrt-apps/trunk/homebox ./luci-app-homebox/
 #Alist
 svn co https://github.com/sbwml/luci-app-alist/trunk ./luci-app-alist
 #mv ./luci-app-alist/luci-app-alist/po/zh_Hans ./luci-app-alist/luci-app-alist/po/zh-cn
-
-#telegrambot
-#svn co https://github.com/alexwbaule/telegramopenwrt/trunk ./telegramopenwrt
 
 #unblockneteasemusic
 svn co https://github.com/UnblockNeteaseMusic/luci-app-unblockneteasemusic/trunk ./luci-app-unblockneteasemusic
@@ -261,4 +258,5 @@ git clone --depth 1 https://github.com/tindy2013/openwrt-subconverter ./luci-app
 rm -rf ./*/.git & rm -f ./*/.gitattributes
 rm -rf ./*/.svn & rm -rf ./*/.github & rm -rf ./*/.gitignore
 rm -rf ./*/*/.svn
+rm -rf ./*/*/README
 exit 0
