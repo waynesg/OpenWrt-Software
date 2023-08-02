@@ -259,4 +259,5 @@ rm -rf ./*/.git & rm -f ./*/.gitattributes
 rm -rf ./*/.svn & rm -rf ./*/.github & rm -rf ./*/.gitignore
 rm -rf ./*/*/.svn
 rm -rf ./*/*/README
+rm -rf ./*/*/README.md
 exit 0
