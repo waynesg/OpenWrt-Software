@@ -30,15 +30,14 @@ svn co https://github.com/jerrykuku/luci-app-vssr/trunk ./luci-app-vssr
 #Bypass
 #svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-bypass ./luci-app-bypass
 #svn co https://github.com/kiddin9/openwrt-packages/trunk/tcping ./luci-app-bypass/tcping
-#svn co https://github.com/xiangfeidexiaohuo/op-ipkg/trunk ./luci-app-bypass/luci-lib-ipkg
 #SSR-PLUS
 svn co https://github.com/fw876/helloworld/trunk/luci-app-ssr-plus
 
 #adblock-plus
 #svn co https://github.com/small-5/luci-app-adblock-plus/branches/18.06 ./luci-app-adblock-plus
 #gowedav
-#svn co https://github.com/project-openwrt/openwrt-gowebdav/trunk ./luci-app-gowebdav
-#svn co https://github.com/1715173329/gowebdav/trunk ./luci-app-gowebdav/gowebdav
+svn co https://github.com/project-openwrt/openwrt-gowebdav/trunk ./luci-app-gowebdav
+svn co https://github.com/1715173329/gowebdav/trunk ./luci-app-gowebdav/gowebdav
 #smartinfo
 svn co https://github.com/iamaluckyguy/luci-app-smartinfo/trunk ./luci-app-smartinfo
 #serverchan
@@ -116,6 +115,7 @@ svn co https://github.com/kiddin9/openwrt-packages/trunk/lua-maxminddb ./luci-ap
 #git clone --depth 1 https://github.com/xiaorouji/openwrt-passwall -b luci openwrt-passwall && mvdir openwrt-passwall
 git clone --depth 1 https://github.com/xiaorouji/openwrt-passwall -b luci-smartdns-new-version openwrt-passwall && mvdir openwrt-passwall
 git clone --depth 1 https://github.com/xiaorouji/openwrt-passwall2 && mvdir openwrt-passwall2
+svn co https://github.com/xiangfeidexiaohuo/op-ipkg/trunk ./luci-app-dependence/luci-lib-ipkg
 
 #iptv
 svn co https://github.com/riverscn/openwrt-iptvhelper/trunk ./luci-app-iptvhelper
