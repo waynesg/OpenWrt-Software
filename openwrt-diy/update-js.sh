@@ -24,13 +24,7 @@ git clone -b js https://github.com/gngpp/luci-theme-design ./luci-theme-design
 #mosdns
 svn co https://github.com/sbwml/luci-app-mosdns/trunk ./luci-app-mosdns
 
-#VSSR
-svn co https://github.com/jerrykuku/luci-app-vssr/trunk ./luci-app-vssr
 
-#Bypass
-svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-bypass ./luci-app-bypass
-#svn co https://github.com/kiddin9/openwrt-packages/trunk/tcping ./luci-app-bypass/tcping
-svn co https://github.com/xiangfeidexiaohuo/op-ipkg/trunk ./luci-app-bypass/luci-lib-ipkg
 #SSR-PLUS
 svn co https://github.com/fw876/helloworld/trunk/luci-app-ssr-plus
 
@@ -41,10 +35,8 @@ svn co https://github.com/project-openwrt/openwrt-gowebdav/trunk ./luci-app-gowe
 svn co https://github.com/1715173329/gowebdav/trunk ./luci-app-gowebdav/gowebdav
 #smartinfo
 svn co https://github.com/iamaluckyguy/luci-app-smartinfo/trunk ./luci-app-smartinfo
-#serverchan
-svn co https://github.com/tty228/luci-app-serverchan/trunk ./luci-app-serverchan
-#autotimeset(自动重启，关机)
-svn co https://github.com/sirpdboy/luci-app-autotimeset/trunk ./luci-app-autotimeset
+
+
 #poweroff 
 svn co https://github.com/esirplayground/luci-app-poweroff/trunk ./luci-app-poweroff
 #netdata
@@ -52,15 +44,8 @@ svn co https://github.com/esirplayground/luci-app-poweroff/trunk ./luci-app-powe
 #svn co https://github.com/kiddin9/openwrt-packages/trunk/netdata ./luci-app-netdata/netdata
 #OAF
 svn co https://github.com/destan19/OpenAppFilter/trunk ./luci-app-oaf
-#OpenClash
-#svn co https://github.com/vernesong/OpenClash/trunk/luci-app-openclash
-#svn co https://github.com/Lienol/openwrt-packages/trunk/net/https-dns-proxy
-#svn co https://github.com/Lienol/openwrt-packages/trunk/net/haproxy
-#eqos
-svn co https://github.com/littletao08/luci-app-eqos/trunk ./luci-app-eqos
-#wrtbwmon
-#svn co https://github.com/firker/luci-app-wrtbwmon-zh/trunk/luci-app-wrtbwmon-zh
-#svn co https://github.com/firker/luci-app-wrtbwmon-zh/trunk/wrtbwmon
+
+
 #advanced
 svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-advanced
 
@@ -153,29 +138,12 @@ svn co https://github.com/Hyy2001X/AutoBuild-Packages/trunk/luci-app-onliner ./l
 #Supervisor
 svn co https://github.com/sundaqiang/openwrt-packages/trunk/luci-app-supervisord ./luci-app-supervisord
 
-#Adguardhome
-svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-adguardhome ./luci-app-adguardhome
-svn co https://github.com/kiddin9/openwrt-packages/trunk/adguardhome ./luci-app-adguardhome/adguardhome
-
-#svn co https://github.com/project-openwrt/openwrt-tmate/trunk ./openwrt-tmate
-#svn co https://github.com/koshev-msk/luci-app-modeminfo
-#svn co https://github.com/tindy2013/openwrt-subconverter/trunk ./openwrt-subconverter
-#svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-aliddns
-
-#nezha
-svn co https://github.com/Erope/openwrt_nezha/trunk/luci-app-nezha ./luci-app-nezha
-svn co https://github.com/Erope/openwrt_nezha/trunk/openwrt-nezha ./luci-app-nezha/openwrt-nezha
 
 #Smartdns
 git clone -b master https://github.com/pymumu/luci-app-smartdns ./luci-app-smartdns
 #svn co https://github.com/pymumu/luci-app-smartdns/branches/lede ./luci-app-smartdns
 svn co https://github.com/pymumu/openwrt-smartdns/trunk ./luci-app-smartdns/smartdns
 
-#Pikpak
-svn co https://github.com/ykxVK8yL5L/pikpak-webdav/trunk/openwrt ./luci-app-pikpak-webdav
-
-svn co https://github.com/koshev-msk/modemfeed/trunk/luci/applications/luci-app-telegrambot ./luci-app-telegrambot
-svn co https://github.com/koshev-msk/modemfeed/trunk/packages/net/telegrambot ./luci-app-telegrambot/telegrambot
 
 svn co https://github.com/esirplayground/openwrt-ethr/trunk ./luci-app-ethr
 
@@ -232,6 +200,17 @@ svn co https://github.com/QiuSimons/OpenWrt-Add/trunk/luci-app-airconnect ./luci
 svn co https://github.com/QiuSimons/OpenWrt-Add/trunk/airconnect ./luci-app-airconnect/airconnect
 svn co https://github.com/QiuSimons/OpenWrt-Add/trunk/luci-app-cpufreq ./luci-app-cpufreq
 svn co https://github.com/coolsnowwolf/luci/trunk/applications/luci-app-pptp-server ./luci-app-pptp-server
+
+#OpenClash
+svn co https://github.com/vernesong/OpenClash/trunk/luci-app-openclash
+
+#wechatpusher
+git clone -b master https://github.com/tty228/luci-app-wechatpush ./luci-app-wechatpush
+
+#eqosplus
+svn co https://github.com/sirpdboy/luci-app-eqosplus/trunk ./luci-app-eqosplus
+
+
 
 rm -rf ./*/.git & rm -f ./*/.gitattributes
 rm -rf ./*/.svn & rm -rf ./*/.github & rm -rf ./*/.gitignore
