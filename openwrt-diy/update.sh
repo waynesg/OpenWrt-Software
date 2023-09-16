@@ -103,7 +103,7 @@ svn co https://github.com/zzsj0928/luci-app-pushbot/trunk ./luci-app-pushbot
 svn co https://github.com/waynesg/luci-app-autoipsetadder/trunk ./luci-app-autoipsetadder
 
 # passwall
-svn co https://github.com/xiaorouji/openwrt-passwall/trunk ./luci-app-dependence
+svn co https://github.com/xiaorouji/openwrt-passwall-packages/trunk ./luci-app-dependence
 #git clone https://github.com/waynesg/passwall.git ./luci-app-dependence
 
 #node-request
