@@ -239,7 +239,7 @@ svn co https://github.com/ximiTech/msd_lite/trunk ./luci-app-dependence/msd_lite
 #svn co https://github.com/linkease/istore/trunk/luci/taskd ./luci-app-store/taskd
 #svn co https://github.com/xiangfeidexiaohuo/op-ipkg/trunk/luci-lib-ipkg ./luci-app-store/luci-lib-ipkg
 
-svn co https://github.com/sbwml/luci-app-airconnect/trunk ./luci-app-airconnect
+#svn co https://github.com/sbwml/luci-app-airconnect/trunk ./luci-app-airconnect
 
 #eqosplus
 svn co https://github.com/sirpdboy/luci-app-eqosplus/trunk ./luci-app-eqosplus
