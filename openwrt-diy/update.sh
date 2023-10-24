@@ -52,7 +52,7 @@ svn co https://github.com/esirplayground/luci-app-poweroff/trunk ./luci-app-powe
 #OAF
 svn co https://github.com/destan19/OpenAppFilter/trunk ./luci-app-oaf
 #OpenClash
-git clone -b dev https://github.com/vernesong/OpenClash/luci-app-openclash ./luci-app-openclash
+git clone -b dev https://github.com/vernesong/OpenClash ./luci-app-openclash
 #svn co https://github.com/vernesong/OpenClash/trunk/luci-app-openclash
 #svn co https://github.com/Lienol/openwrt-packages/trunk/net/https-dns-proxy
 #svn co https://github.com/Lienol/openwrt-packages/trunk/net/haproxy
@@ -258,5 +258,6 @@ git clone --depth 1 https://github.com/tindy2013/openwrt-subconverter ./luci-app
 rm -rf ./*/.git & rm -f ./*/.gitattributes
 rm -rf ./*/.svn & rm -rf ./*/.github & rm -rf ./*/.gitignore
 rm -rf ./*/*/.svn
+rm -rf ./*/img
 rm -rf ./*/*/README
 exit 0
