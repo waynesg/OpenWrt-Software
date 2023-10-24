@@ -52,7 +52,8 @@ svn co https://github.com/esirplayground/luci-app-poweroff/trunk ./luci-app-powe
 #OAF
 svn co https://github.com/destan19/OpenAppFilter/trunk ./luci-app-oaf
 #OpenClash
-svn co https://github.com/vernesong/OpenClash/trunk/luci-app-openclash
+git clone -b dev https://github.com/vernesong/OpenClash/luci-app-openclash ./luci-app-openclash
+#svn co https://github.com/vernesong/OpenClash/trunk/luci-app-openclash
 #svn co https://github.com/Lienol/openwrt-packages/trunk/net/https-dns-proxy
 #svn co https://github.com/Lienol/openwrt-packages/trunk/net/haproxy
 #eqos
