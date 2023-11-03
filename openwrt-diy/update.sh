@@ -31,7 +31,7 @@ svn co https://github.com/jerrykuku/luci-app-vssr/trunk ./luci-app-vssr
 #svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-bypass ./luci-app-bypass
 #svn co https://github.com/kiddin9/openwrt-packages/trunk/tcping ./luci-app-bypass/tcping
 #SSR-PLUS
-svn co https://github.com/fw876/helloworld/trunk/luci-app-ssr-plus
+svn co https://github.com/fw876/helloworld/branches/main/luci-app-ssr-plus ./luci-app-ssr-plus
 
 #adblock-plus
 #svn co https://github.com/small-5/luci-app-adblock-plus/branches/18.06 ./luci-app-adblock-plus
@@ -53,7 +53,7 @@ svn co https://github.com/esirplayground/luci-app-poweroff/trunk ./luci-app-powe
 svn co https://github.com/destan19/OpenAppFilter/trunk ./luci-app-oaf
 #OpenClash
 #git clone -b dev https://github.com/vernesong/OpenClash ./luci-app-openclash
-svn co https://github.com/vernesong/OpenClash//branches/dev ./luci-app-openclash
+svn co https://github.com/vernesong/OpenClash/branches/dev ./luci-app-openclash
 #svn co https://github.com/Lienol/openwrt-packages/trunk/net/https-dns-proxy
 #svn co https://github.com/Lienol/openwrt-packages/trunk/net/haproxy
 #eqos
