@@ -7,8 +7,8 @@ on:
   #    - '~/openwrt-diy/update-js.sh'
   #watch:
   #  types: started
-  schedule:
-    - cron: 10 20 * * *
+  #schedule:
+  #  - cron: 10 20 * * *
   repository_dispatch:
 
 env:
