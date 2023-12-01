@@ -110,14 +110,14 @@ svn co https://github.com/xiaorouji/openwrt-passwall-packages/trunk ./luci-app-d
 #node-request
 svn co https://github.com/jerrykuku/node-request/trunk ./luci-app-dependence/node-request
 #lua-neturl
-svn co https://github.com/fw876/helloworld/trunk/lua-neturl ./luci-app-dependence/lua-neturl
-svn co https://github.com/fw876/helloworld/trunk/redsocks2 ./luci-app-dependence/redsock2
+svn co https://github.com/fw876/helloworld/lua-neturl/branches/main ./luci-app-dependence/lua-neturl
+svn co https://github.com/fw876/helloworld/redsocks2/branches/main ./luci-app-dependence/redsock2
 svn co https://github.com/kiddin9/openwrt-packages/trunk/lua-maxminddb ./luci-app-dependence/lua-maxminddb
 #git clone --depth 1 https://github.com/xiaorouji/openwrt-passwall -b luci openwrt-passwall && mvdir openwrt-passwall
 git clone --depth 1 https://github.com/xiaorouji/openwrt-passwall -b luci-smartdns-dev openwrt-passwall && mvdir openwrt-passwall
 git clone --depth 1 https://github.com/xiaorouji/openwrt-passwall2 && mvdir openwrt-passwall2
-svn co https://github.com/HiJwm/op-ipkg/trunk/luci-lib-ipkg ./luci-app-dependence/luci-lib-ipkg
-svn co https://github.com/fw876/helloworld/trunk/shadow-tls ./luci-app-dependence/shadow-tls
+svn co https://github.com/fw876/helloworld/shadow-tls/branches/main ./luci-app-dependence/shadow-tls
+svn co https://github.com/kiddin9/openwrt-packages/trunk/wrtbwmon ./luci-app-dependence/wrtbwmon
 
 #iptv
 svn co https://github.com/riverscn/openwrt-iptvhelper/trunk ./luci-app-iptvhelper
@@ -231,15 +231,6 @@ svn co https://github.com/sirpdboy/luci-app-parentcontrol/trunk ./luci-app-paren
 #msd_lite
 svn co https://github.com/ximiTech/luci-app-msd_lite/trunk ./luci-app-msd_lite
 svn co https://github.com/ximiTech/msd_lite/trunk ./luci-app-dependence/msd_lite
-
-#quickstart
-#svn co https://github.com/linkease/nas-packages-luci/trunk/luci/luci-app-quickstart ./luci-app-quickstart
-#svn co https://github.com/linkease/nas-packages/trunk/network/services/quickstart ./luci-app-quickstart/quickstart
-#svn co https://github.com/linkease/istore/trunk/luci/luci-app-store ./luci-app-store
-#svn co https://github.com/linkease/istore/trunk/luci/luci-lib-taskd ./luci-app-store/luci-lib-taskd
-#svn co https://github.com/linkease/istore/trunk/luci/luci-lib-xterm ./luci-app-store/luci-lib-xterm
-#svn co https://github.com/linkease/istore/trunk/luci/taskd ./luci-app-store/taskd
-#svn co https://github.com/xiangfeidexiaohuo/op-ipkg/trunk/luci-lib-ipkg ./luci-app-store/luci-lib-ipkg
 
 svn co https://github.com/sbwml/luci-app-airconnect/trunk ./luci-app-airconnect
 
