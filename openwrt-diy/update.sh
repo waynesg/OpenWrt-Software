@@ -116,7 +116,7 @@ svn co https://github.com/kiddin9/openwrt-packages/trunk/lua-maxminddb ./luci-ap
 #git clone --depth 1 https://github.com/xiaorouji/openwrt-passwall -b luci openwrt-passwall && mvdir openwrt-passwall
 git clone --depth 1 https://github.com/xiaorouji/openwrt-passwall -b luci-smartdns-dev openwrt-passwall && mvdir openwrt-passwall
 git clone --depth 1 https://github.com/xiaorouji/openwrt-passwall2 && mvdir openwrt-passwall2
-svn co https://github.com/xiangfeidexiaohuo/op-ipkg/trunk ./luci-app-dependence/luci-lib-ipkg
+svn co https://github.com/HiJwm/op-ipkg/trunk/luci-lib-ipkg ./luci-app-dependence/luci-lib-ipkg
 svn co https://github.com/fw876/helloworld/trunk/shadow-tls ./luci-app-dependence/shadow-tls
 
 #iptv
