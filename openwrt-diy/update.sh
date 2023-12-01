@@ -110,13 +110,15 @@ svn co https://github.com/xiaorouji/openwrt-passwall-packages/trunk ./luci-app-d
 #node-request
 svn co https://github.com/jerrykuku/node-request/trunk ./luci-app-dependence/node-request
 #lua-neturl
-svn co https://github.com/fw876/helloworld/lua-neturl/branches/main ./luci-app-dependence/lua-neturl
-svn co https://github.com/fw876/helloworld/redsocks2/branches/main ./luci-app-dependence/redsock2
+cd ./luci-app-dependence/
+git clone -b main https://github.com/fw876/helloworld/ lua-neturl
+git clone -b main https://github.com/fw876/helloworld/ redsocks2
+git clone -b main https://github.com/fw876/helloworld/ shadow-tls
+cd ..
 svn co https://github.com/kiddin9/openwrt-packages/trunk/lua-maxminddb ./luci-app-dependence/lua-maxminddb
 #git clone --depth 1 https://github.com/xiaorouji/openwrt-passwall -b luci openwrt-passwall && mvdir openwrt-passwall
 git clone --depth 1 https://github.com/xiaorouji/openwrt-passwall -b luci-smartdns-dev openwrt-passwall && mvdir openwrt-passwall
 git clone --depth 1 https://github.com/xiaorouji/openwrt-passwall2 && mvdir openwrt-passwall2
-svn co https://github.com/fw876/helloworld/shadow-tls/branches/main ./luci-app-dependence/shadow-tls
 svn co https://github.com/kiddin9/openwrt-packages/trunk/wrtbwmon ./luci-app-dependence/wrtbwmon
 
 #iptv
@@ -156,15 +158,6 @@ svn co https://github.com/Hyy2001X/AutoBuild-Packages/trunk/luci-app-onliner ./l
 
 #Supervisor
 svn co https://github.com/sundaqiang/openwrt-packages/trunk/luci-app-supervisord ./luci-app-supervisord
-
-#Adguardhome
-#svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-adguardhome ./luci-app-adguardhome
-#svn co https://github.com/kiddin9/openwrt-packages/trunk/adguardhome ./luci-app-adguardhome/adguardhome
-
-#svn co https://github.com/project-openwrt/openwrt-tmate/trunk ./openwrt-tmate
-#svn co https://github.com/koshev-msk/luci-app-modeminfo
-#svn co https://github.com/tindy2013/openwrt-subconverter/trunk ./openwrt-subconverter
-#svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-aliddns
 
 #nezha
 #svn co https://github.com/Erope/openwrt_nezha/trunk/luci-app-nezha ./luci-app-nezha
