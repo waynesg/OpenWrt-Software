@@ -110,11 +110,9 @@ svn co https://github.com/xiaorouji/openwrt-passwall-packages/trunk ./luci-app-d
 #node-request
 svn co https://github.com/jerrykuku/node-request/trunk ./luci-app-dependence/node-request
 #lua-neturl
-cd ./luci-app-dependence/
-git clone -b main https://github.com/fw876/helloworld/ lua-neturl
-git clone -b main https://github.com/fw876/helloworld/ redsocks2
-git clone -b main https://github.com/fw876/helloworld/ shadow-tls
-cd ..
+cd ./luci-app-ssr-plus/
+git clone -b main https://github.com/fw876/helloworld && cd helloworld && find . -mindepth 1 -maxdepth 1 ! -name 'a' ! -name 'b' -exec rm -rf {} \
+cd .. && cd ..
 svn co https://github.com/kiddin9/openwrt-packages/trunk/lua-maxminddb ./luci-app-dependence/lua-maxminddb
 #git clone --depth 1 https://github.com/xiaorouji/openwrt-passwall -b luci openwrt-passwall && mvdir openwrt-passwall
 git clone --depth 1 https://github.com/xiaorouji/openwrt-passwall -b luci-smartdns-dev openwrt-passwall && mvdir openwrt-passwall
