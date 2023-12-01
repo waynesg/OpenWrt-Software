@@ -109,15 +109,15 @@ svn co https://github.com/xiaorouji/openwrt-passwall-packages/trunk ./luci-app-d
 
 #node-request
 svn co https://github.com/jerrykuku/node-request/trunk ./luci-app-dependence/node-request
-#lua-neturl
+#lua-neturl      
 svn co https://github.com/kiddin9/openwrt-packages/trunk/lua-neturl ./luci-app-dependence/lua-neturl
 svn co https://github.com/kiddin9/openwrt-packages/trunk/shadow-tls ./luci-app-dependence/shadow-tls
 svn co https://github.com/kiddin9/openwrt-packages/trunk/redsocks2 ./luci-app-dependence/redsocks2
 svn co https://github.com/kiddin9/openwrt-packages/trunk/lua-maxminddb ./luci-app-dependence/lua-maxminddb
+svn co https://github.com/kiddin9/openwrt-packages/trunk/wrtbwmon ./luci-app-dependence/wrtbwmon
 #git clone --depth 1 https://github.com/xiaorouji/openwrt-passwall -b luci openwrt-passwall && mvdir openwrt-passwall
 git clone --depth 1 https://github.com/xiaorouji/openwrt-passwall -b luci-smartdns-dev openwrt-passwall && mvdir openwrt-passwall
 git clone --depth 1 https://github.com/xiaorouji/openwrt-passwall2 && mvdir openwrt-passwall2
-svn co https://github.com/kiddin9/openwrt-packages/trunk/wrtbwmon ./luci-app-dependence/wrtbwmon
 
 #iptv
 svn co https://github.com/riverscn/openwrt-iptvhelper/trunk ./luci-app-iptvhelper
