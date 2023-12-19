@@ -15,7 +15,6 @@ git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon ./luci-theme-ar
 svn co https://github.com/siropboy/sirpdboy-package/trunk/luci-theme-opentomcat
 svn co https://github.com/sirpdboy/luci-theme-opentopd/trunk ./luci-theme-opentopd
 svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-theme-atmaterial
-svn co https://github.com/rosywrt/luci-theme-rosy/trunk/luci-theme-rosy
 svn co https://github.com/kiddin9/luci-theme-edge/branches/18.06 ./luci-theme-edge
 #git clone -b main https://github.com/gngpp/luci-theme-design ./luci-theme-design
 
@@ -135,18 +134,8 @@ svn co https://github.com/immortalwrt-collections/openwrt-cdnspeedtest/trunk/cdn
 #Speedtest
 svn co https://github.com/sirpdboy/netspeedtest/trunk ./luci-app-netspeedtest
 
-#Pandownload-fake-server
-#svn co https://github.com/kiddin9/openwrt-packages/trunk/pandownload-fake-server
-
-#homebridge
-#svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-homebridge
-
 #zospusher
 svn co https://github.com/zhengwenxiao/luci-app-zospusher/trunk ./luci-app-zospusher
-
-#aliyun webdav
-#svn co https://github.com/jerrykuku/luci-app-go-aliyundrive-webdav/trunk ./luci-app-go-aliyundrive-webdav
-#svn co https://github.com/jerrykuku/go-aliyundrive-webdav/trunk ./luci-app-go-aliyundrive-webdav/go-aliyundrive-webdav
 
 #webguide
 svn co https://github.com/p1ay8y3ar/luci-app-webguide/trunk/luci-app-webguide ./luci-app-webguide
@@ -156,10 +145,6 @@ svn co https://github.com/Hyy2001X/AutoBuild-Packages/trunk/luci-app-onliner ./l
 
 #Supervisor
 svn co https://github.com/sundaqiang/openwrt-packages/trunk/luci-app-supervisord ./luci-app-supervisord
-
-#nezha
-#svn co https://github.com/Erope/openwrt_nezha/trunk/luci-app-nezha ./luci-app-nezha
-#svn co https://github.com/Erope/openwrt_nezha/trunk/openwrt-nezha ./luci-app-nezha/openwrt-nezha
 
 #Smartdns
 #svn co https://github.com/pymumu/luci-app-smartdns/branches/lede ./luci-app-smartdns
