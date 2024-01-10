@@ -219,6 +219,9 @@ svn co https://github.com/sbwml/luci-app-openai/trunk ./luci-app-openai
 #wechatpusher
 git clone -b openwrt-18.06 https://github.com/tty228/luci-app-wechatpush ./luci-app-wechatpush
 
+#homeproxy
+git clone --depth 1 https://github.com/immortalwrt/homeproxy ./luci-app-homeproxy
+
 
 git clone --depth 1 https://github.com/thinktip/luci-theme-neobird.git ./luci-theme-neobird
 git clone --depth 1 https://github.com/tindy2013/openwrt-subconverter ./luci-app-subconverter
